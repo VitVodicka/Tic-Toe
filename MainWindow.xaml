@@ -96,11 +96,11 @@
         <TextBlock FontFamily="Play" Text="X turn" FontSize="50" Grid.Column="1" HorizontalAlignment="Center" Width="146" Name="turn" />
         <StackPanel Orientation="Vertical" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Height="104" Width="128" >
             <Label Content="Player(X)" FontSize="30" FontFamily="Play" Margin="0,0,0,25" HorizontalContentAlignment="Center"></Label>
-            <TextBlock Text="0" FontSize="30" FontFamily="Play" TextAlignment="Center"></TextBlock>
+            <TextBlock Text="{Binding PlayerX}" FontSize="30" FontFamily="Play" TextAlignment="Center"></TextBlock>
         </StackPanel>
         <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Height="104" Width="132" >
             <Label Content="Player(O)" FontSize="30" FontFamily="Play" Margin="0,0,0,25" HorizontalContentAlignment="Center"></Label>
-            <TextBlock Text="0" FontSize="30" FontFamily="Play" TextAlignment="Center"></TextBlock>
+            <TextBlock Text="{Binding PlayerY}" FontSize="30" FontFamily="Play" TextAlignment="Center"></TextBlock>
         </StackPanel>
         <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="104" Width="50" >
             <Label Content="Tie" FontSize="30" FontFamily="Play" Margin="0,0,0,25" HorizontalContentAlignment="Center"></Label>

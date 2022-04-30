@@ -27,6 +27,7 @@ namespace Tic_Toe
             InitializeComponent();
             DataContext = b;
             
+            
 
         }
 
