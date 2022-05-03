@@ -27,15 +27,10 @@ namespace Tic_Toe
             InitializeComponent();
             DataContext = b;
 
-            
-            
-            
 
-        }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            
+
+
         }
 
         private void checking(object sender, RoutedEventArgs e)
@@ -44,10 +39,12 @@ namespace Tic_Toe
            
             Switching();
             b.Checking(arry);
+            b.Full(arry);
             if (b.Tru == true)
             {
                 ArrayChecking();
             }
+            
 
         }
         #region Switching X and Y
@@ -174,5 +171,10 @@ namespace Tic_Toe
             }
         }
         #endregion
+
+        private void Record_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
