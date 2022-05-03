@@ -18,12 +18,15 @@ namespace Tic_Toe
         public Background()
         {
             Observ = new ObservableCollection<Background>();
+            Tru = false;
         }
 
         public int PlayerX { get; set; }
         public int PlayerY { get; set; }
         public int Tie { get; set; }
         public int Timer { get; set; }
+        public string[,] array { get; set; }
+        public bool Tru { get; set; }
 
         public ObservableCollection<Background> Observ{get;set;}
 
@@ -34,90 +37,120 @@ namespace Tic_Toe
             Background b = new Background(PlayerX, PlayerY, Tie, Timer);
             Observ.Add(b);
         }
-        public void Checking(string[,] array)
+        public void Checking(string[,] arr)
         {
-            for (int i = 0; i < pole.GetLength(0); i++)//rows
+            
+            array = arr;
+            for (int i = 0; i < array.GetLength(0); i++)//rows
             {
-                for (int k = 0; k < pole.GetLength(1); k++)//columns
+                for (int k = 0; k < array.GetLength(1); k++)//columns
                 {
-                    /*if ((k == 0) && (pole[i, k] == "X") && (pole[i, k + 1] == "X") && (pole[i, k + 2] == "X"))
+                    if ((k == 0) && (array[i, k] == "X") && (array[i, k + 1] == "X") && (array[i, k + 2] == "X"))
                     {
                         PlayerX += 1;
-                        Console.WriteLine("PlayerX:"+PlayerX);
+                        Change("PlayerX");
+                        Tru = true;
+
+                        Clearing();
 
                     }
-                    if ((k == 0) && (pole[i, k] == "Y") && (pole[i, k + 1] == "Y") && (pole[i, k + 2] == "Y"))
+                    if ((k == 0) && (array[i, k] == "Y") && (array[i, k + 1] == "Y") && (array[i, k + 2] == "Y"))
                     {
                         PlayerY += 1;
-                        Console.WriteLine("PlayerY:"+PlayerY);
+                        Change("PlayerY");
+                        Clearing();
+                        Tru = true;
 
-                    }*/
+
+                    }
                     //column checking working
 
-                    /* if ((i == 0) && (pole[i, k] == "X") && (pole[i+1,k] == "X") && (pole[i+2, k] == "X"))
+                    if ((i == 0) && (array[i, k] == "X") && (array[i+1,k] == "X") && (array[i+2, k] == "X"))
                      {
                          PlayerX += 1;
-                         Console.WriteLine("PlayerX:" + PlayerX);
+                         Change("PlayerX");
+                         Clearing();
+                        Tru = true;
 
-                     }
-                     if ((i == 0) && (pole[i, k] == "Y") && (pole[i + 1, k] == "Y") && (pole[i + 2, k] == "Y"))
+                    }
+                     if ((i == 0) && (array[i, k] == "Y") && (array[i + 1, k] == "Y") && (array[i + 2, k] == "Y"))
                      {
                          PlayerY += 1;
-                         Console.WriteLine("PlayerY:" + PlayerY);
+                         Change("PlayerY");
+                         Clearing();
+                        Tru = true;
 
-                     }
-                     row checking working
-                     */
-                    /*
-                    if ((i == 0) && (k==0)&& (pole[i, k] == "X") && (pole[i + 1, k+1] == "X") && (pole[i + 2, k+2] == "X"))
+
+                    }
+                     
+                    
+                    if ((i == 0) && (k==0)&& (array[i, k] == "X") && (array[i + 1, k+1] == "X") && (array[i + 2, k+2] == "X"))
                     {
                         PlayerX += 1;
-                        Console.WriteLine("PlayerX:" + PlayerX);
+                        Change("PlayerX");
+                        Clearing();
+                        Tru = true;
+
 
                     }
-                    if ((i == 0) && (k == 0) && (pole[i, k] == "Y") && (pole[i + 1, k + 1] == "Y") && (pole[i + 2, k + 2] == "Y"))
+                    if ((i == 0) && (k == 0) && (array[i, k] == "Y") && (array[i + 1, k + 1] == "Y") && (array[i + 2, k + 2] == "Y"))
                     {
                         PlayerY += 1;
-                        Console.WriteLine("PlayerY:" + PlayerY);
+                        Change("PlayerY");
+                        Clearing();
+                        Tru = true;
+
 
                     }
-                    left diagonal checking
-                    */
-                    /*
+                    
+                    
+                    
                     if ((i == 0) && (k == 2))
                     {
-                        if ((pole[i, k]=="X")&&(pole[i+1,k-1]=="X") && (pole[i + 2, k - 2] == "X"))
+                        if ((array[i, k]=="X")&&(array[i+1,k-1]=="X") && (array[i + 2, k - 2] == "X"))
                         {
                             PlayerX += 1;
-                            Console.WriteLine("PlayerX:" + PlayerX);
+                            Change("PlayerX");
+                            Clearing();
+                            Tru = true;
+
                         }
 
 
                     }
                     if ((i == 0) && (k == 2))
                     {
-                        if ((pole[i, k] == "Y") && (pole[i + 1, k - 1] == "Y") && (pole[i + 2, k - 2] == "Y"))
+                        if ((array[i, k] == "Y") && (array[i + 1, k - 1] == "Y") && (array[i + 2, k - 2] == "Y"))
                         {
                             PlayerY += 1;
-                            Console.WriteLine("PlayerY:" + PlayerY);
+                            Change("PlayerY");
+                            Clearing();
+                            Tru = true;
+
                         }
 
 
                     }
-                    right diagonal working
-                    */
+                    
 
 
                     //rows working
                 }
             }
-
-            //string[,] pole = { { "X", "X", "X" }, { "Y", "Y", "Y" }, { "X", "X", "X" } }; column checking
-            //string[,] pole = { { "X", "Y", "X" }, { "X", "Y", "X" }, { "X", "Y", "X" } }; row checking
-            string[,] pole = { { "X", "X", "Y" }, { "X", "Y", "Y" }, { "Y", "Y", "Y" } };
-
            
             //pomocí pomocného textboxu budu poznávat zda tam má být křížek nebo kolečko a pomocí datatrigeru budu na něj se odtaz, jestli tam je křížek nebo kolečko a podle toho poznám, jaký znak by tam měl být
+        }
+        public void Clearing()
+        {
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                for (int k = 0; k < array.GetLength(1); k++)
+                {
+                    array[i, k] = "";
+                    
+                }
+            }
+            Change("array");
         }
         public void Change(string change)
         {

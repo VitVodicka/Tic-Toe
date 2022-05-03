@@ -26,6 +26,8 @@ namespace Tic_Toe
         {
             InitializeComponent();
             DataContext = b;
+
+            
             
             
 
@@ -33,7 +35,7 @@ namespace Tic_Toe
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void checking(object sender, RoutedEventArgs e)
@@ -42,6 +44,10 @@ namespace Tic_Toe
            
             Switching();
             b.Checking(arry);
+            if (b.Tru == true)
+            {
+                ArrayChecking();
+            }
 
         }
         #region Switching X and Y
@@ -113,6 +119,59 @@ namespace Tic_Toe
             }
 
 
+        }
+        #endregion
+
+        #region ArrayChecking
+        public void ArrayChecking()
+        {
+            b.Tru = false;
+            for (int i = 0; i < b.array.GetLength(0); i++)//rows
+            {
+                for (int k = 0; k < b.array.GetLength(1); k++)//columns
+                {
+                    if ((i == 0) && (k == 0))
+                    {
+                        arrayColumn0Row0.IsChecked = false;
+                        
+                        
+                    }
+                    if ((i == 0) && (k == 1))
+                    {
+                        arrayColumn1Row0.IsChecked = false;
+                        
+                    }
+                    if ((i == 0) && (k == 2))
+                    {
+                        arrayColumn2Row0.IsChecked = false;
+                        
+                    }
+                    if ((i == 1) && (k == 0))
+                    {
+                        arrayColumn0Row1.IsChecked = false;
+                    }
+                    if ((i == 1) && (k == 1))
+                    {
+                        arrayColumn1Row1.IsChecked = false;
+                    }
+                    if ((i == 1) && (k == 2))
+                    {
+                        arrayColumn2Row1.IsChecked = false;
+                    }
+                    if ((i == 2) && (k == 0))
+                    {
+                        arrayColumn0Row2.IsChecked = false;
+                    }
+                    if ((i == 2) && (k == 1))
+                    {
+                        arrayColumn1Row2.IsChecked = false;
+                    }
+                    if ((i == 2) && (k == 2))
+                    {
+                        arrayColumn2Row2.IsChecked = false;
+                    }
+                }
+            }
         }
         #endregion
     }

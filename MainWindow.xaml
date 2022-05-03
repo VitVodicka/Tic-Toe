@@ -50,7 +50,7 @@
                 <ScaleTransform ScaleX="18" ScaleY="13"></ScaleTransform>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox Grid.Row="1"  Background="#E5E5E5" Grid.Column="1" BorderThickness="0.5" VerticalAlignment="Center" Height="14" Name="arrayColumn1Row1" Checked="checking">
+        <CheckBox Grid.Row="1"  Background="#E5E5E5"  Grid.Column="1"   BorderThickness="0.5" VerticalAlignment="Center" Height="14" Name="arrayColumn1Row1" Checked="checking" >
             <CheckBox.BorderBrush  >
                 <SolidColorBrush Color="Black" ></SolidColorBrush>
             </CheckBox.BorderBrush>
