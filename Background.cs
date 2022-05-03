@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Text;
 
 namespace Tic_Toe
 {
     class Background:INotifyPropertyChanged
     {
-        public Background(int playerX, int playerY, int tie, int timer)
+        Stopwatch stop = new Stopwatch();
+        
+        public Background(int playerX, int playerY, int tie, string timer)
         {
             PlayerX = playerX;
             PlayerY = playerY;
@@ -24,13 +27,31 @@ namespace Tic_Toe
         public int PlayerX { get; set; }
         public int PlayerY { get; set; }
         public int Tie { get; set; }
-        public int Timer { get; set; }
+        public string Timer
+        {
+            get
+            {
+                stop.Start();
+                return stop.Elapsed.ToString();
+                
+            }
+            set
+            {
+
+            }
+        }
         public string[,] array { get; set; }
         public bool Tru { get; set; }
 
         public ObservableCollection<Background> Observ{get;set;}
 
         public event PropertyChangedEventHandler PropertyChanged;
+
+        public void AddingToCollection(Background b)
+        {
+            Observ.Add(b);
+            Change("Observ");
+        }
 
         public void Adding()
         {

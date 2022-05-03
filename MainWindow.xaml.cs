@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,15 +23,12 @@ namespace Tic_Toe
     {
         Background b = new Background();
         string[,] arry = new string[3, 3];
+        
+
         public MainWindow()
         {
             InitializeComponent();
             DataContext = b;
-
-
-
-
-
         }
 
         private void checking(object sender, RoutedEventArgs e)
@@ -174,7 +172,14 @@ namespace Tic_Toe
 
         private void Record_Click(object sender, RoutedEventArgs e)
         {
+            Background c = new Background(b.PlayerX, b.PlayerY, b.Tie, stopwatch.Text);
+            b.AddingToCollection(c);
+        }
 
+        private void load_Click(object sender, RoutedEventArgs e)
+        {
+            OpenPage z = new OpenPage();
+            z.Show();
         }
     }
 }
