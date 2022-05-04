@@ -23,12 +23,17 @@ namespace Tic_Toe
     {
         Background b = new Background();
         string[,] arry = new string[3, 3];
-        
+        Stopwatch stop = new Stopwatch();
+
 
         public MainWindow()
         {
             InitializeComponent();
             DataContext = b;
+            
+            stop.Start();
+            
+            
         }
 
         private void checking(object sender, RoutedEventArgs e)
@@ -172,7 +177,11 @@ namespace Tic_Toe
 
         private void Record_Click(object sender, RoutedEventArgs e)
         {
-            Background c = new Background(b.PlayerX, b.PlayerY, b.Tie, stopwatch.Text);
+            stop.Stop();
+            
+            Background c = new Background(b.PlayerX, b.PlayerY, b.Tie,Math.Round(stop.Elapsed.TotalSeconds,2).ToString());
+            
+            
             b.AddingToCollection(c);
         }
 
@@ -180,6 +189,14 @@ namespace Tic_Toe
         {
             OpenPage z = new OpenPage();
             z.Show();
+        }
+
+        private void Restart(object sender, RoutedEventArgs e)
+        {
+            ArrayChecking();
+            b.Restart();
+            stop.Start();
+
         }
     }
 }

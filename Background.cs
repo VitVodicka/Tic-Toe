@@ -9,7 +9,7 @@ namespace Tic_Toe
 {
     class Background:INotifyPropertyChanged
     {
-        Stopwatch stop = new Stopwatch();
+        
         
         public Background(int playerX, int playerY, int tie, string timer)
         {
@@ -27,19 +27,8 @@ namespace Tic_Toe
         public int PlayerX { get; set; }
         public int PlayerY { get; set; }
         public int Tie { get; set; }
-        public string Timer
-        {
-            get
-            {
-                stop.Start();
-                return stop.Elapsed.ToString();
-                
-            }
-            set
-            {
-
-            }
-        }
+        public string Timer { get; set; }
+        
         public string[,] array { get; set; }
         public bool Tru { get; set; }
 
@@ -194,6 +183,21 @@ namespace Tic_Toe
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(change));
             }
+        }
+        public override string ToString()
+        {
+            return "Player X:" + PlayerX + " Player Y:" + PlayerY + " Tie:" + Tie + " Time:" + Timer;
+        }
+        public void Restart()
+        {
+            PlayerX = 0;
+            Change("PlayerX");
+            PlayerY = 0;
+            Change("PlayerY");
+            Tie = 0;
+            Change("Tie");
+            Timer = "";
+            Change("Timer");
         }
     }
 }

@@ -18,6 +18,7 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
+
         <CheckBox Grid.RowSpan="2" Grid.Row="1"  Background="#E5E5E5" Margin="0,14,0,0" BorderThickness="0.5" Name="arrayColumn0Row0" Checked="checking" >
             <CheckBox.BorderBrush  >
                 <SolidColorBrush Color="Black" ></SolidColorBrush>
@@ -68,7 +69,7 @@
         </CheckBox>
 
 
-        <CheckBox Grid.RowSpan="2" Grid.Row="1"  Background="#E5E5E5" Grid.Column="2" Margin="0,14,0,0" BorderThickness="0.5" Name="arrayColumn2Row0" Checked="checking">
+        <CheckBox Grid.RowSpan="2" Grid.Row="1"  Background="#E5E5E5" Grid.Column="2" Margin="0,11,0,3" BorderThickness="0.5" Name="arrayColumn2Row0" Checked="checking" >
             <CheckBox.BorderBrush  >
                 <SolidColorBrush Color="Black" ></SolidColorBrush>
             </CheckBox.BorderBrush>
@@ -110,9 +111,13 @@
             <Label Content="Timer" FontSize="30" FontFamily="Play" Margin="0,0,0,25" HorizontalContentAlignment="Center"></Label>
             <TextBlock Text="{Binding Timer}" FontSize="30" FontFamily="Play" TextAlignment="Center" Name="stopwatch"></TextBlock>
         </StackPanel>
-        <Button Width="70" Height="70" Name="load" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0"  Grid.Column="0" Click="load_Click"/>
-        <ListBox Grid.Column="3" ItemsSource="{Binding Observ}" Grid.Row="0" Grid.RowSpan="2" Height="500" VerticalAlignment="Top" Background="#E9E9E9" Margin="10,10,10,0" Name="record"></ListBox>
+        <Button Grid.Column="0" Click="Restart" ></Button>
+       
+
+
+
+        <ListBox Grid.Column="3" ItemsSource="{Binding Observ}" FontSize="16" FontFamily="Play" Grid.Row="0" Grid.RowSpan="2" Height="500" VerticalAlignment="Top" Background="#E9E9E9" Margin="10,10,10,0" Name="record"></ListBox>
         <Button Content="Record" Grid.Column="3" Grid.Row="1" Height="110" FontSize="36" VerticalAlignment="Top" Margin="33,487,32,0" Click="Record_Click"/>
-        
+
     </Grid>
 </Window>

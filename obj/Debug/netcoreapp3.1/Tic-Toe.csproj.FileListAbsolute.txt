@@ -18,3 +18,5 @@ C:\Users\Vít Vodička\source\repos\Tic-Toe\Tic-Toe\obj\Debug\netcoreapp3.1\Tic-
 C:\Users\Vít Vodička\source\repos\Tic-Toe\Tic-Toe\obj\Debug\netcoreapp3.1\Tic-Toe.dll
 C:\Users\Vít Vodička\source\repos\Tic-Toe\Tic-Toe\obj\Debug\netcoreapp3.1\Tic-Toe.pdb
 C:\Users\Vít Vodička\source\repos\Tic-Toe\Tic-Toe\obj\Debug\netcoreapp3.1\Tic-Toe.genruntimeconfig.cache
+C:\Users\Vít Vodička\source\repos\Tic-Toe\Tic-Toe\obj\Debug\netcoreapp3.1\OpenPage.g.cs
+C:\Users\Vít Vodička\source\repos\Tic-Toe\Tic-Toe\obj\Debug\netcoreapp3.1\OpenPage.baml
