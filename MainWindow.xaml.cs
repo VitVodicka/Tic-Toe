@@ -26,12 +26,14 @@ namespace Tic_Toe
         Stopwatch stop = new Stopwatch();
 
 
+
         public MainWindow()
         {
+            
             InitializeComponent();
             DataContext = b;
-            
             stop.Start();
+            stopwatch.Text=stop.Elapsed.ToString();
             
             
         }
@@ -180,7 +182,7 @@ namespace Tic_Toe
             stop.Stop();
             
             Background c = new Background(b.PlayerX, b.PlayerY, b.Tie,Math.Round(stop.Elapsed.TotalSeconds,2).ToString());
-            
+            stop.Restart();
             
             b.AddingToCollection(c);
         }
@@ -196,7 +198,12 @@ namespace Tic_Toe
             ArrayChecking();
             b.Restart();
             stop.Start();
+            turn.Text="X turn";
+        }
 
+        private void listboxDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            b.Delete(record.SelectedIndex);
         }
     }
 }

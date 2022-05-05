@@ -199,5 +199,10 @@ namespace Tic_Toe
             Timer = "";
             Change("Timer");
         }
+        public void Delete(int index)
+        {
+            Observ.RemoveAt(index);
+            Change("Observ");
+        }
     }
 }
