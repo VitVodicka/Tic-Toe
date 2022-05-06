@@ -21,27 +21,26 @@ namespace Tic_Toe
     /// </summary>
     public partial class MainWindow : Window
     {
+
         Background b = new Background();
         string[,] arry = new string[3, 3];
-        Stopwatch stop = new Stopwatch();
-
+        
 
 
         public MainWindow()
         {
-            
             InitializeComponent();
             DataContext = b;
-            stop.Start();
-            stopwatch.Text=stop.Elapsed.ToString();
+            b.init();
             
-            
+
+
         }
 
         private void checking(object sender, RoutedEventArgs e)
         {
             RowChecking();
-           
+
             Switching();
             b.Checking(arry);
             b.Full(arry);
@@ -49,7 +48,7 @@ namespace Tic_Toe
             {
                 ArrayChecking();
             }
-            
+
 
         }
         #region Switching X and Y
@@ -72,51 +71,51 @@ namespace Tic_Toe
             char[] krizek = turn.Text.ToCharArray();//returns first letter of title
 
             //if box is checked and if it has something then it will has a letter of the titile
-            if ((arrayColumn0Row0.IsChecked == true)&&((arry[0,0]==null)||(arry[0, 0] == "")))
+            if ((arrayColumn0Row0.IsChecked == true) && ((arry[0, 0] == null) || (arry[0, 0] == "")))
             {
-                arry[0, 0] = krizek[0].ToString();   
+                arry[0, 0] = krizek[0].ToString();
             }
             if (arrayColumn1Row0.IsChecked == true && ((arry[1, 0] == null) || (arry[1, 0] == "")))
             {
 
-                
+
                 arry[1, 0] = krizek[0].ToString();
             }
             if (arrayColumn2Row0.IsChecked == true && ((arry[2, 0] == null) || (arry[2, 0] == "")))
             {
 
-                
+
                 arry[2, 0] = krizek[0].ToString();
             }
             if (arrayColumn0Row1.IsChecked == true && ((arry[0, 1] == null) || (arry[0, 1] == "")))
             {
-                
+
                 arry[0, 1] = krizek[0].ToString();
             }
             if (arrayColumn0Row2.IsChecked == true && ((arry[0, 2] == null) || (arry[0, 2] == "")))
             {
-                
+
                 arry[0, 2] = krizek[0].ToString();
             }
 
             if (arrayColumn1Row1.IsChecked == true && ((arry[1, 1] == null) || (arry[1, 1] == "")))
             {
-                
+
                 arry[1, 1] = krizek[0].ToString();
             }
             if (arrayColumn1Row2.IsChecked == true && ((arry[1, 2] == null) || (arry[1, 2] == "")))
             {
-                
+
                 arry[1, 2] = krizek[0].ToString();
             }
             if (arrayColumn2Row1.IsChecked == true && ((arry[2, 1] == null) || (arry[2, 1] == "")))
             {
-                
+
                 arry[2, 1] = krizek[0].ToString();
             }
             if (arrayColumn2Row2.IsChecked == true && ((arry[2, 2] == null) || (arry[2, 2] == "")))
             {
-                
+
                 arry[2, 2] = krizek[0].ToString();
             }
 
@@ -135,18 +134,18 @@ namespace Tic_Toe
                     if ((i == 0) && (k == 0))
                     {
                         arrayColumn0Row0.IsChecked = false;
-                        
-                        
+
+
                     }
                     if ((i == 0) && (k == 1))
                     {
                         arrayColumn1Row0.IsChecked = false;
-                        
+
                     }
                     if ((i == 0) && (k == 2))
                     {
                         arrayColumn2Row0.IsChecked = false;
-                        
+
                     }
                     if ((i == 1) && (k == 0))
                     {
@@ -179,11 +178,11 @@ namespace Tic_Toe
 
         private void Record_Click(object sender, RoutedEventArgs e)
         {
-            stop.Stop();
             
-            Background c = new Background(b.PlayerX, b.PlayerY, b.Tie,Math.Round(stop.Elapsed.TotalSeconds,2).ToString());
-            stop.Restart();
-            
+
+            Background c = new Background(b.PlayerX, b.PlayerY, b.Tie, b.Timer);
+
+
             b.AddingToCollection(c);
         }
 
@@ -197,13 +196,14 @@ namespace Tic_Toe
         {
             ArrayChecking();
             b.Restart();
-            stop.Start();
-            turn.Text="X turn";
+            turn.Text = "X turn";
+            
+
         }
 
-        private void listboxDoubleClick(object sender, MouseButtonEventArgs e)
+        private void doubleListClick(object sender, MouseButtonEventArgs e)
         {
-            b.Delete(record.SelectedIndex);
+            b.DoubleClick(record.SelectedIndex);
         }
     }
 }

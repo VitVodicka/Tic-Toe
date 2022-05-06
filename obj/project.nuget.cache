@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TiN+K3W4aPzWWFmnUvg7i4RT4FfhCp7Qxmjpwm1NAciGQPA1+SxvNsT56UWsE6WB0AIe0jTWETu6jUJ7v0PySQ==",
+  "dgSpecHash": "TDFFCye7Bj+bc1XAvxPOAHS/YDiBjX8WeJn+2KW4CmsdhQAPlNpqM7K3ERSB7eVCYsj513ebrrmCJ2RqReHJJg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Vít Vodička\\source\\repos\\Tic-Toe\\Tic-Toe\\Tic-Toe.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Vít Vodička\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.24\\microsoft.netcore.app.host.win-x64.3.1.24.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
