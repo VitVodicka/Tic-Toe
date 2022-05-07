@@ -5,9 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tic_Toe"
         mc:Ignorable="d"
-        Title="OpenPage" Height="450" Width="800">
-    <Grid>
+        Title="OpenPage" Height="940" Width="1280" FontFamily="Play" WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.65*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
         
+        <DataGrid Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <ListBox Grid.Column="0" Margin="5"></ListBox>
+        <TextBlock Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Text="My Records" FontSize="40"></TextBlock>
+
 
 
     </Grid>
