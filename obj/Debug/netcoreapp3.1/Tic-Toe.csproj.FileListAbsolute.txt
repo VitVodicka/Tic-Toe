@@ -5,11 +5,9 @@ C:\Users\Vít Vodička\source\repos\Tic-Toe\Tic-Toe\bin\Debug\netcoreapp3.1\Tic-
 C:\Users\Vít Vodička\source\repos\Tic-Toe\Tic-Toe\bin\Debug\netcoreapp3.1\Tic-Toe.dll
 C:\Users\Vít Vodička\source\repos\Tic-Toe\Tic-Toe\bin\Debug\netcoreapp3.1\Tic-Toe.pdb
 C:\Users\Vít Vodička\source\repos\Tic-Toe\Tic-Toe\obj\Debug\netcoreapp3.1\Tic-Toe.csproj.AssemblyReference.cache
-C:\Users\Vít Vodička\source\repos\Tic-Toe\Tic-Toe\obj\Debug\netcoreapp3.1\MainWindow.g.cs
 C:\Users\Vít Vodička\source\repos\Tic-Toe\Tic-Toe\obj\Debug\netcoreapp3.1\App.g.cs
 C:\Users\Vít Vodička\source\repos\Tic-Toe\Tic-Toe\obj\Debug\netcoreapp3.1\Tic-Toe_MarkupCompile.cache
 C:\Users\Vít Vodička\source\repos\Tic-Toe\Tic-Toe\obj\Debug\netcoreapp3.1\Tic-Toe_MarkupCompile.lref
-C:\Users\Vít Vodička\source\repos\Tic-Toe\Tic-Toe\obj\Debug\netcoreapp3.1\MainWindow.baml
 C:\Users\Vít Vodička\source\repos\Tic-Toe\Tic-Toe\obj\Debug\netcoreapp3.1\Tic-Toe.g.resources
 C:\Users\Vít Vodička\source\repos\Tic-Toe\Tic-Toe\obj\Debug\netcoreapp3.1\Tic-Toe.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Vít Vodička\source\repos\Tic-Toe\Tic-Toe\obj\Debug\netcoreapp3.1\Tic-Toe.AssemblyInfoInputs.cache
@@ -20,3 +18,7 @@ C:\Users\Vít Vodička\source\repos\Tic-Toe\Tic-Toe\obj\Debug\netcoreapp3.1\Tic-
 C:\Users\Vít Vodička\source\repos\Tic-Toe\Tic-Toe\obj\Debug\netcoreapp3.1\Tic-Toe.genruntimeconfig.cache
 C:\Users\Vít Vodička\source\repos\Tic-Toe\Tic-Toe\obj\Debug\netcoreapp3.1\OpenPage.g.cs
 C:\Users\Vít Vodička\source\repos\Tic-Toe\Tic-Toe\obj\Debug\netcoreapp3.1\OpenPage.baml
+C:\Users\Vít Vodička\source\repos\Tic-Toe\Tic-Toe\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\Vít Vodička\source\repos\Tic-Toe\Tic-Toe\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\Vít Vodička\source\repos\Tic-Toe\Tic-Toe\obj\Debug\netcoreapp3.1\Tic-Toe_Content.g.cs
+C:\Users\Vít Vodička\source\repos\Tic-Toe\Tic-Toe\bin\Debug\netcoreapp3.1\res.jpg
