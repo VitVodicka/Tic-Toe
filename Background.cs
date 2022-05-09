@@ -285,7 +285,11 @@ namespace Tic_Toe
         }
         public void DoubleClick(int index)
         {
-            Observ.RemoveAt(index);
+            if (index != -1)
+            {
+                Observ.RemoveAt(index);
+            }
+            
             Change("Observ");
         }
     }

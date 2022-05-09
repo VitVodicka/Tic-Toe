@@ -127,7 +127,11 @@ namespace Tic_Toe
         public void ArrayChecking()
         {
             b.Tru = false;
-            for (int i = 0; i < b.array.GetLength(0); i++)//rows
+            if (b.array != null)
+            {
+
+            
+            for (int i = 0; (i < b.array.GetLength(0)); i++)//rows
             {
                 for (int k = 0; k < b.array.GetLength(1); k++)//columns
                 {
@@ -173,6 +177,7 @@ namespace Tic_Toe
                     }
                 }
             }
+            }
         }
         #endregion
 
@@ -204,6 +209,12 @@ namespace Tic_Toe
         private void doubleListClick(object sender, MouseButtonEventArgs e)
         {
             b.DoubleClick(record.SelectedIndex);
+        }
+
+        private void OpenPage(object sender, RoutedEventArgs e)
+        {
+            OpenPage p = new OpenPage();
+            p.Show();
         }
     }
 }

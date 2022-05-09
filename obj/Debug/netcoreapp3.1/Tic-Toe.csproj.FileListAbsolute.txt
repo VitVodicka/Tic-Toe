@@ -22,3 +22,6 @@ C:\Users\Vít Vodička\source\repos\Tic-Toe\Tic-Toe\obj\Debug\netcoreapp3.1\Main
 C:\Users\Vít Vodička\source\repos\Tic-Toe\Tic-Toe\obj\Debug\netcoreapp3.1\MainWindow.baml
 C:\Users\Vít Vodička\source\repos\Tic-Toe\Tic-Toe\obj\Debug\netcoreapp3.1\Tic-Toe_Content.g.cs
 C:\Users\Vít Vodička\source\repos\Tic-Toe\Tic-Toe\bin\Debug\netcoreapp3.1\res.jpg
+C:\Users\Vít Vodička\source\repos\Tic-Toe\Tic-Toe\bin\Debug\netcoreapp3.1\pismenoR.png
+C:\Users\Vít Vodička\source\repos\Tic-Toe\Tic-Toe\bin\Debug\netcoreapp3.1\edit.png
+C:\Users\Vít Vodička\source\repos\Tic-Toe\Tic-Toe\bin\Debug\netcoreapp3.1\load.png

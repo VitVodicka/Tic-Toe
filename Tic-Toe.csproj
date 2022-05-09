@@ -8,14 +8,28 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="edit.png" />
+    <None Remove="load.png" />
     <None Remove="res.jpg" />
     <None Remove="res.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="edit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="load.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="res.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="pismenoR.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
