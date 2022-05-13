@@ -60,71 +60,367 @@
                 </ControlTemplate>
             </CheckBox.Template>
         </CheckBox>
-        <CheckBox Grid.Row="2"  Background="#E5E5E5"  Height="Auto"  Width="Auto"  BorderThickness="0.5"  Margin="60,83,0,0" VerticalAlignment="Top"  Name="arrayColumn0Row1" Checked="checking">
+        <CheckBox Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center"  Background="#E5E5E5"  Height="Auto"  Width="Auto"  BorderThickness="0.5"   Name="arrayColumn0Row1" Checked="checking">
             <CheckBox.BorderBrush  >
                 <SolidColorBrush Color="Black" ></SolidColorBrush>
             </CheckBox.BorderBrush>
             <CheckBox.LayoutTransform >
-                <ScaleTransform ScaleX="18" ScaleY="13"></ScaleTransform>
+                <ScaleTransform ScaleX="16" ScaleY="11"></ScaleTransform>
             </CheckBox.LayoutTransform>
+            <CheckBox.Template>
+
+                <ControlTemplate TargetType="{x:Type CheckBox}" >
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" >
+                        <Border BorderBrush="{TemplateBinding BorderBrush}"  Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" Width="15" Height="15">
+                            <!--                                   your color here -->
+
+                            <TextBlock Text="{TemplateBinding Content}" Width="15" Visibility="Hidden" Foreground="Black" FontFamily="Play" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,-4,0"   Height="15" Name="cross"></TextBlock>
+                        </Border>
+
+                    </StackPanel>
+                    <ControlTemplate.Triggers >
+                        
+                            
+                       
+                        <DataTrigger Binding="{Binding ElementName=turn, Path=Text}" Value="X turn"  >
+                            <Setter TargetName="cross" Property="Text" Value="X"></Setter>
+
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=turn, Path=Text}" Value="Y turn"  >
+                            
+                            <Setter TargetName="cross" Property="Text" Value="O"></Setter>
+                            
+                        </DataTrigger>
+                        
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="cross" Property="Visibility" Value="Visible"></Setter>
+                            
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter TargetName="cross" Property="Visibility" Value="Hidden"></Setter>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </CheckBox.Template>
         </CheckBox>
-        <CheckBox Grid.RowSpan="1" Grid.Row="3"  Background="#E5E5E5" Margin="0,0,0,86" HorizontalAlignment="Right" BorderThickness="0.5" VerticalAlignment="Bottom" Height="Auto"  Width="Auto"  Name="arrayColumn0Row2" Checked="checking" >
+        <CheckBox Grid.Row="3" Grid.Column="0"  Background="#E5E5E5"  HorizontalAlignment="Right" BorderThickness="0.5" VerticalAlignment="Top" Height="Auto"  Width="Auto"  Name="arrayColumn0Row2" Checked="checking" >
             <CheckBox.BorderBrush  >
                 <SolidColorBrush Color="Black" ></SolidColorBrush>
             </CheckBox.BorderBrush>
             <CheckBox.LayoutTransform >
-                <ScaleTransform ScaleX="18" ScaleY="13"></ScaleTransform>
+                <ScaleTransform ScaleX="16" ScaleY="11"></ScaleTransform>
             </CheckBox.LayoutTransform>
+            <CheckBox.Template>
+
+                <ControlTemplate TargetType="{x:Type CheckBox}" >
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" >
+                        <Border BorderBrush="{TemplateBinding BorderBrush}"  Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" Width="15" Height="15">
+                            <!--                                   your color here -->
+
+                            <TextBlock Text="{TemplateBinding Content}" Width="15" Visibility="Hidden" Foreground="Black" FontFamily="Play" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,-4,0"   Height="15" Name="cross"></TextBlock>
+                        </Border>
+
+                    </StackPanel>
+                    <ControlTemplate.Triggers >
+
+
+
+                        <DataTrigger Binding="{Binding ElementName=turn, Path=Text}" Value="X turn"  >
+                            <Setter TargetName="cross" Property="Text" Value="X"></Setter>
+
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=turn, Path=Text}" Value="Y turn"  >
+
+                            <Setter TargetName="cross" Property="Text" Value="O"></Setter>
+
+                        </DataTrigger>
+
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="cross" Property="Visibility" Value="Visible"></Setter>
+
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter TargetName="cross" Property="Visibility" Value="Hidden"></Setter>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </CheckBox.Template>
         </CheckBox>
-        <CheckBox Grid.RowSpan="4" Grid.Row="1"  Background="#E5E5E5" Margin="287,82,307,0"  Height="Auto" Width="Auto"    BorderThickness="0.5" Name="arrayColumn1Row0" Checked="checking" Grid.ColumnSpan="3">
+        <CheckBox  Grid.Row="1"  Background="#E5E5E5" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Center"  Height="Auto" Width="Auto"    BorderThickness="0.5" Name="arrayColumn1Row0" Checked="checking" >
             <CheckBox.BorderBrush  >
                 <SolidColorBrush Color="Black" ></SolidColorBrush>
             </CheckBox.BorderBrush>
             <CheckBox.LayoutTransform >
-                <ScaleTransform ScaleX="18" ScaleY="13"></ScaleTransform>
+                <ScaleTransform ScaleX="16" ScaleY="11"></ScaleTransform>
             </CheckBox.LayoutTransform>
+            <CheckBox.Template>
+
+                <ControlTemplate TargetType="{x:Type CheckBox}" >
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" >
+                        <Border BorderBrush="{TemplateBinding BorderBrush}"  Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" Width="15" Height="15">
+                            <!--                                   your color here -->
+
+                            <TextBlock Text="{TemplateBinding Content}" Width="15" Visibility="Hidden" Foreground="Black" FontFamily="Play" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,-4,0"   Height="15" Name="cross"></TextBlock>
+                        </Border>
+
+                    </StackPanel>
+                    <ControlTemplate.Triggers >
+
+
+
+                        <DataTrigger Binding="{Binding ElementName=turn, Path=Text}" Value="X turn"  >
+                            <Setter TargetName="cross" Property="Text" Value="X"></Setter>
+
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=turn, Path=Text}" Value="Y turn"  >
+
+                            <Setter TargetName="cross" Property="Text" Value="O"></Setter>
+
+                        </DataTrigger>
+
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="cross" Property="Visibility" Value="Visible"></Setter>
+
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter TargetName="cross" Property="Visibility" Value="Hidden"></Setter>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </CheckBox.Template>
         </CheckBox>
-        <CheckBox Grid.Row="2"  Background="#E5E5E5" MinHeight="14" Height="Auto"  Width="Auto"  Margin="287,83,307,0"    BorderThickness="0.5" VerticalAlignment="Top"  Name="arrayColumn1Row1" Checked="checking" Grid.ColumnSpan="3" >
+        <CheckBox Grid.Row="2" Grid.Column="1"  Background="#E5E5E5" HorizontalAlignment="Center" MinHeight="14" Height="Auto"  Width="Auto"     BorderThickness="0.5" VerticalAlignment="Center"  Name="arrayColumn1Row1" Checked="checking"  >
             <CheckBox.BorderBrush  >
                 <SolidColorBrush Color="Black" ></SolidColorBrush>
             </CheckBox.BorderBrush>
             <CheckBox.LayoutTransform >
-                <ScaleTransform ScaleX="18" ScaleY="13"></ScaleTransform>
+                <ScaleTransform ScaleX="16" ScaleY="11"></ScaleTransform>
             </CheckBox.LayoutTransform>
+            <CheckBox.Template>
+
+                <ControlTemplate TargetType="{x:Type CheckBox}" >
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" >
+                        <Border BorderBrush="{TemplateBinding BorderBrush}"  Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" Width="15" Height="15">
+                            <!--                                   your color here -->
+
+                            <TextBlock Text="{TemplateBinding Content}" Width="15" Visibility="Hidden" Foreground="Black" FontFamily="Play" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,-4,0"   Height="15" Name="cross"></TextBlock>
+                        </Border>
+
+                    </StackPanel>
+                    <ControlTemplate.Triggers >
+
+
+
+                        <DataTrigger Binding="{Binding ElementName=turn, Path=Text}" Value="X turn"  >
+                            <Setter TargetName="cross" Property="Text" Value="X"></Setter>
+
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=turn, Path=Text}" Value="Y turn"  >
+
+                            <Setter TargetName="cross" Property="Text" Value="O"></Setter>
+
+                        </DataTrigger>
+
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="cross" Property="Visibility" Value="Visible"></Setter>
+
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter TargetName="cross" Property="Visibility" Value="Hidden"></Setter>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </CheckBox.Template>
         </CheckBox>
-        <CheckBox Grid.RowSpan="1" Grid.Row="3"  Background="#E5E5E5" Margin="287,0,307,86"  BorderThickness="0.5" VerticalAlignment="Bottom" Height="Auto" Width="Auto"  Name="arrayColumn1Row2" Checked="checking" Grid.ColumnSpan="3" >
+        <CheckBox Grid.Row="3"  Background="#E5E5E5" Grid.Column="1"  VerticalAlignment="Top" HorizontalAlignment="Center"  BorderThickness="0.5"  Height="Auto" Width="Auto"  Name="arrayColumn1Row2" Checked="checking"  >
             <CheckBox.BorderBrush  >
                 <SolidColorBrush Color="Black" ></SolidColorBrush>
             </CheckBox.BorderBrush>
             <CheckBox.LayoutTransform >
-                <ScaleTransform ScaleX="18" ScaleY="13"></ScaleTransform>
+                <ScaleTransform ScaleX="16" ScaleY="11"></ScaleTransform>
             </CheckBox.LayoutTransform>
+            <CheckBox.Template>
+
+                <ControlTemplate TargetType="{x:Type CheckBox}" >
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" >
+                        <Border BorderBrush="{TemplateBinding BorderBrush}"  Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" Width="15" Height="15">
+                            <!--                                   your color here -->
+
+                            <TextBlock Text="{TemplateBinding Content}" Width="15" Visibility="Hidden" Foreground="Black" FontFamily="Play" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,-4,0"   Height="15" Name="cross"></TextBlock>
+                        </Border>
+
+                    </StackPanel>
+                    <ControlTemplate.Triggers >
+
+
+
+                        <DataTrigger Binding="{Binding ElementName=turn, Path=Text}" Value="X turn"  >
+                            <Setter TargetName="cross" Property="Text" Value="X"></Setter>
+
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=turn, Path=Text}" Value="Y turn"  >
+
+                            <Setter TargetName="cross" Property="Text" Value="O"></Setter>
+
+                        </DataTrigger>
+
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="cross" Property="Visibility" Value="Visible"></Setter>
+
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter TargetName="cross" Property="Visibility" Value="Hidden"></Setter>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </CheckBox.Template>
         </CheckBox>
 
 
-        <CheckBox Grid.RowSpan="4" Grid.Row="1"   HorizontalAlignment="Left" Margin="208,82,0,0" Width="Auto"  Height="Auto"   Background="#E5E5E5" Grid.Column="1"  BorderThickness="0.5" Name="arrayColumn2Row0" Checked="checking" >
+        <CheckBox  Grid.Row="1"   HorizontalAlignment="Left" VerticalAlignment="Bottom"  Width="Auto"  Height="Auto"   Background="#E5E5E5" Grid.Column="2"  BorderThickness="0.5" Name="arrayColumn2Row0" Checked="checking" >
             <CheckBox.BorderBrush  >
                 <SolidColorBrush Color="Black" ></SolidColorBrush>
             </CheckBox.BorderBrush>
             <CheckBox.LayoutTransform >
-                <ScaleTransform ScaleX="18" ScaleY="13"></ScaleTransform>
+                <ScaleTransform ScaleX="16" ScaleY="11"></ScaleTransform>
             </CheckBox.LayoutTransform>
+            <CheckBox.Template>
+
+                <ControlTemplate TargetType="{x:Type CheckBox}" >
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" >
+                        <Border BorderBrush="{TemplateBinding BorderBrush}"  Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" Width="15" Height="15">
+                            <!--                                   your color here -->
+
+                            <TextBlock Text="{TemplateBinding Content}" Width="15" Visibility="Hidden" Foreground="Black" FontFamily="Play" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,-4,0"   Height="15" Name="cross"></TextBlock>
+                        </Border>
+
+                    </StackPanel>
+                    <ControlTemplate.Triggers >
+
+
+
+                        <DataTrigger Binding="{Binding ElementName=turn, Path=Text}" Value="X turn"  >
+                            <Setter TargetName="cross" Property="Text" Value="X"></Setter>
+
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=turn, Path=Text}" Value="Y turn"  >
+
+                            <Setter TargetName="cross" Property="Text" Value="O"></Setter>
+
+                        </DataTrigger>
+
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="cross" Property="Visibility" Value="Visible"></Setter>
+
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter TargetName="cross" Property="Visibility" Value="Hidden"></Setter>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </CheckBox.Template>
         </CheckBox>
-        <CheckBox Grid.Row="2"  Background="#E5E5E5" Grid.Column="1"  Width="Auto"   Margin="208,83,338,0" BorderThickness="0.5" VerticalAlignment="Top" Height="Auto" Name="arrayColumn2Row1" Checked="checking" Grid.ColumnSpan="3">
+        <CheckBox Grid.Row="2" VerticalAlignment="Center" Background="#E5E5E5" Grid.Column="2"  Width="Auto"   HorizontalAlignment="Left" BorderThickness="0.5"  Height="Auto" Name="arrayColumn2Row1" Checked="checking" Grid.ColumnSpan="3">
             <CheckBox.BorderBrush  >
                 <SolidColorBrush Color="Black" ></SolidColorBrush>
             </CheckBox.BorderBrush>
             <CheckBox.LayoutTransform >
-                <ScaleTransform ScaleX="18" ScaleY="13"></ScaleTransform>
+                <ScaleTransform ScaleX="16" ScaleY="11"></ScaleTransform>
             </CheckBox.LayoutTransform>
+            <CheckBox.Template>
+
+                <ControlTemplate TargetType="{x:Type CheckBox}" >
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" >
+                        <Border BorderBrush="{TemplateBinding BorderBrush}"  Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" Width="15" Height="15">
+                            <!--                                   your color here -->
+
+                            <TextBlock Text="{TemplateBinding Content}" Width="15" Visibility="Hidden" Foreground="Black" FontFamily="Play" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,-4,0"   Height="15" Name="cross"></TextBlock>
+                        </Border>
+
+                    </StackPanel>
+                    <ControlTemplate.Triggers >
+
+
+
+                        <DataTrigger Binding="{Binding ElementName=turn, Path=Text}" Value="X turn"  >
+                            <Setter TargetName="cross" Property="Text" Value="X"></Setter>
+
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=turn, Path=Text}" Value="Y turn"  >
+
+                            <Setter TargetName="cross" Property="Text" Value="O"></Setter>
+
+                        </DataTrigger>
+
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="cross" Property="Visibility" Value="Visible"></Setter>
+
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter TargetName="cross" Property="Visibility" Value="Hidden"></Setter>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </CheckBox.Template>
         </CheckBox>
-        <CheckBox  Grid.Row="3" Grid.Column="1"  Background="#E5E5E5"  Width="Auto"   Margin="208,0,338,86" VerticalAlignment="Bottom" BorderThickness="0.5"  Height="Auto"  Name="arrayColumn2Row2" Checked="checking" Grid.ColumnSpan="3" >
+        <CheckBox  Grid.Row="3" Grid.Column="2"  Background="#E5E5E5" HorizontalAlignment="Left" VerticalAlignment="Top"  Width="Auto"    BorderThickness="0.5"  Height="Auto"  Name="arrayColumn2Row2" Checked="checking"  >
             <CheckBox.BorderBrush  >
                 <SolidColorBrush Color="Black" ></SolidColorBrush>
             </CheckBox.BorderBrush>
             <CheckBox.LayoutTransform >
-                <ScaleTransform ScaleX="18" ScaleY="13"></ScaleTransform>
+                <ScaleTransform ScaleX="16" ScaleY="11"></ScaleTransform>
             </CheckBox.LayoutTransform>
+            <CheckBox.Template>
+
+                <ControlTemplate TargetType="{x:Type CheckBox}" >
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" >
+                        <Border BorderBrush="{TemplateBinding BorderBrush}"  Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" Width="15" Height="15">
+                            <!--                                   your color here -->
+
+                            <TextBlock Text="{TemplateBinding Content}" Width="15" Visibility="Hidden" Foreground="Black" FontFamily="Play" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,-4,0"   Height="15" Name="cross"></TextBlock>
+                        </Border>
+
+                    </StackPanel>
+                    <ControlTemplate.Triggers >
+
+
+
+                        <DataTrigger Binding="{Binding ElementName=turn, Path=Text}" Value="X turn"  >
+                            <Setter TargetName="cross" Property="Text" Value="X"></Setter>
+
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=turn, Path=Text}" Value="Y turn"  >
+
+                            <Setter TargetName="cross" Property="Text" Value="O"></Setter>
+
+                        </DataTrigger>
+
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="cross" Property="Visibility" Value="Visible"></Setter>
+
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter TargetName="cross" Property="Visibility" Value="Hidden"></Setter>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </CheckBox.Template>
         </CheckBox>
 
         <TextBlock FontFamily="Play" Text="X turn" FontSize="50" Grid.Column="1" HorizontalAlignment="Center" Width="146" Name="turn" />
