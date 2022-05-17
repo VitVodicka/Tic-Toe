@@ -21,7 +21,7 @@
             <ColumnDefinition Width="1.1*"/>
         </Grid.ColumnDefinitions>
 
-        <CheckBox  HorizontalAlignment="Right" Grid.Row="1" Grid.Column="0" VerticalAlignment="Bottom"  Background="#E5E5E5"   BorderThickness="0.5" Name="arrayColumn0Row0" Checked="checking"  >
+        <CheckBox  HorizontalAlignment="Right" Grid.Row="1" Grid.Column="0" Content="X" VerticalAlignment="Bottom"  Background="#E5E5E5"   BorderThickness="0.5" Name="arrayColumn0Row0" Checked="checking"  >
             <CheckBox.BorderBrush  >
                 <SolidColorBrush Color="Black" ></SolidColorBrush>
             </CheckBox.BorderBrush>
@@ -33,34 +33,30 @@
                 <ControlTemplate TargetType="{x:Type CheckBox}" >
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" >
-                        <Border BorderBrush="{TemplateBinding BorderBrush}"  Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" Width="15" Height="15">
+                        <Border BorderBrush="{TemplateBinding BorderBrush}"  Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" Width="15" Height="15" IsEnabled="{TemplateBinding IsEnabled}">
                             <!--                                   your color here -->
 
-                            <TextBlock Text="{TemplateBinding Content}" Width="15" Visibility="Hidden" Foreground="Black" FontFamily="Play" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,-4,0"   Height="15" Name="cross"></TextBlock>
+                            <TextBlock Text="{TemplateBinding Content}" Width="15" Visibility="Visible" IsEnabled="False"  Foreground="Black" FontFamily="Play" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,-4,0"   Height="15" Name="cross"></TextBlock>
                         </Border>
 
                     </StackPanel>
                     <ControlTemplate.Triggers >
-                        <DataTrigger Binding="{Binding ElementName=turn, Path=Text}" Value="X turn"  >
-                            <Setter TargetName="cross" Property="Text" Value="X"></Setter>
 
-                        </DataTrigger>
-                        <DataTrigger Binding="{Binding ElementName=turn, Path=Text}" Value="Y turn"  >
-                            <Setter TargetName="cross" Property="Text" Value="O"></Setter>
-                            <Setter TargetName="cross" Property="Visibility" Value="Visible"></Setter>
-                        </DataTrigger>
+
                         <Trigger Property="IsChecked" Value="True">
                             <Setter TargetName="cross" Property="Visibility" Value="Visible"></Setter>
                         </Trigger>
+
                         <Trigger Property="IsChecked" Value="False">
                             <Setter TargetName="cross" Property="Visibility" Value="Hidden"></Setter>
                         </Trigger>
+
 
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </CheckBox.Template>
         </CheckBox>
-        <CheckBox Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center"  Background="#E5E5E5"  Height="Auto"  Width="Auto"  BorderThickness="0.5"   Name="arrayColumn0Row1" Checked="checking">
+        <CheckBox Grid.Row="2" HorizontalAlignment="Right" Content="X" VerticalAlignment="Center"  Background="#E5E5E5"  Height="Auto"  Width="Auto"  BorderThickness="0.5"   Name="arrayColumn0Row1" Checked="checking">
             <CheckBox.BorderBrush  >
                 <SolidColorBrush Color="Black" ></SolidColorBrush>
             </CheckBox.BorderBrush>
@@ -80,19 +76,7 @@
 
                     </StackPanel>
                     <ControlTemplate.Triggers >
-                        
-                            
-                       
-                        <DataTrigger Binding="{Binding ElementName=turn, Path=Text}" Value="X turn"  >
-                            <Setter TargetName="cross" Property="Text" Value="X"></Setter>
 
-                        </DataTrigger>
-                        <DataTrigger Binding="{Binding ElementName=turn, Path=Text}" Value="Y turn"  >
-                            
-                            <Setter TargetName="cross" Property="Text" Value="O"></Setter>
-                            
-                        </DataTrigger>
-                        
                         <Trigger Property="IsChecked" Value="True">
                             <Setter TargetName="cross" Property="Visibility" Value="Visible"></Setter>
                             
@@ -126,18 +110,6 @@
                     </StackPanel>
                     <ControlTemplate.Triggers >
 
-
-
-                        <DataTrigger Binding="{Binding ElementName=turn, Path=Text}" Value="X turn"  >
-                            <Setter TargetName="cross" Property="Text" Value="X"></Setter>
-
-                        </DataTrigger>
-                        <DataTrigger Binding="{Binding ElementName=turn, Path=Text}" Value="Y turn"  >
-
-                            <Setter TargetName="cross" Property="Text" Value="O"></Setter>
-
-                        </DataTrigger>
-
                         <Trigger Property="IsChecked" Value="True">
                             <Setter TargetName="cross" Property="Visibility" Value="Visible"></Setter>
 
@@ -170,19 +142,6 @@
 
                     </StackPanel>
                     <ControlTemplate.Triggers >
-
-
-
-                        <DataTrigger Binding="{Binding ElementName=turn, Path=Text}" Value="X turn"  >
-                            <Setter TargetName="cross" Property="Text" Value="X"></Setter>
-
-                        </DataTrigger>
-                        <DataTrigger Binding="{Binding ElementName=turn, Path=Text}" Value="Y turn"  >
-
-                            <Setter TargetName="cross" Property="Text" Value="O"></Setter>
-
-                        </DataTrigger>
-
                         <Trigger Property="IsChecked" Value="True">
                             <Setter TargetName="cross" Property="Visibility" Value="Visible"></Setter>
 
@@ -216,18 +175,6 @@
                     </StackPanel>
                     <ControlTemplate.Triggers >
 
-
-
-                        <DataTrigger Binding="{Binding ElementName=turn, Path=Text}" Value="X turn"  >
-                            <Setter TargetName="cross" Property="Text" Value="X"></Setter>
-
-                        </DataTrigger>
-                        <DataTrigger Binding="{Binding ElementName=turn, Path=Text}" Value="Y turn"  >
-
-                            <Setter TargetName="cross" Property="Text" Value="O"></Setter>
-
-                        </DataTrigger>
-
                         <Trigger Property="IsChecked" Value="True">
                             <Setter TargetName="cross" Property="Visibility" Value="Visible"></Setter>
 
@@ -260,18 +207,6 @@
 
                     </StackPanel>
                     <ControlTemplate.Triggers >
-
-
-
-                        <DataTrigger Binding="{Binding ElementName=turn, Path=Text}" Value="X turn"  >
-                            <Setter TargetName="cross" Property="Text" Value="X"></Setter>
-
-                        </DataTrigger>
-                        <DataTrigger Binding="{Binding ElementName=turn, Path=Text}" Value="Y turn"  >
-
-                            <Setter TargetName="cross" Property="Text" Value="O"></Setter>
-
-                        </DataTrigger>
 
                         <Trigger Property="IsChecked" Value="True">
                             <Setter TargetName="cross" Property="Visibility" Value="Visible"></Setter>
@@ -308,18 +243,6 @@
                     </StackPanel>
                     <ControlTemplate.Triggers >
 
-
-
-                        <DataTrigger Binding="{Binding ElementName=turn, Path=Text}" Value="X turn"  >
-                            <Setter TargetName="cross" Property="Text" Value="X"></Setter>
-
-                        </DataTrigger>
-                        <DataTrigger Binding="{Binding ElementName=turn, Path=Text}" Value="Y turn"  >
-
-                            <Setter TargetName="cross" Property="Text" Value="O"></Setter>
-
-                        </DataTrigger>
-
                         <Trigger Property="IsChecked" Value="True">
                             <Setter TargetName="cross" Property="Visibility" Value="Visible"></Setter>
 
@@ -353,18 +276,6 @@
                     </StackPanel>
                     <ControlTemplate.Triggers >
 
-
-
-                        <DataTrigger Binding="{Binding ElementName=turn, Path=Text}" Value="X turn"  >
-                            <Setter TargetName="cross" Property="Text" Value="X"></Setter>
-
-                        </DataTrigger>
-                        <DataTrigger Binding="{Binding ElementName=turn, Path=Text}" Value="Y turn"  >
-
-                            <Setter TargetName="cross" Property="Text" Value="O"></Setter>
-
-                        </DataTrigger>
-
                         <Trigger Property="IsChecked" Value="True">
                             <Setter TargetName="cross" Property="Visibility" Value="Visible"></Setter>
 
@@ -397,18 +308,6 @@
 
                     </StackPanel>
                     <ControlTemplate.Triggers >
-
-
-
-                        <DataTrigger Binding="{Binding ElementName=turn, Path=Text}" Value="X turn"  >
-                            <Setter TargetName="cross" Property="Text" Value="X"></Setter>
-
-                        </DataTrigger>
-                        <DataTrigger Binding="{Binding ElementName=turn, Path=Text}" Value="Y turn"  >
-
-                            <Setter TargetName="cross" Property="Text" Value="O"></Setter>
-
-                        </DataTrigger>
 
                         <Trigger Property="IsChecked" Value="True">
                             <Setter TargetName="cross" Property="Visibility" Value="Visible"></Setter>
@@ -473,6 +372,7 @@
 
         <ListBox Grid.Column="3" ItemsSource="{Binding Observ}" FontSize="16" FontFamily="Play" Grid.Row="0" Grid.RowSpan="3" Height="500" VerticalAlignment="Top" Background="#E9E9E9" Margin="10,10,10,0" Name="record" MouseDoubleClick="doubleListClick"></ListBox>
         <Button Content="Record" Grid.Column="3" Grid.Row="3" Height="110" FontSize="36" VerticalAlignment="Top" Margin="33,21,32,0" Click="Record_Click"/>
+      
 
     </Grid>
 </Window>

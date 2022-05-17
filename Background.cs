@@ -26,6 +26,7 @@ namespace Tic_Toe
         int s = 0;
         int h = 0;
         int m = 0;
+        string[,] arry = new string[3, 3];
 
         public int PlayerX { get; set; }
         public int PlayerY { get; set; }
@@ -122,7 +123,7 @@ namespace Tic_Toe
             Background b = new Background(PlayerX, PlayerY, Tie, Timer);
             Observ.Add(b);
         }
-        public void Checking(string[,] arr)
+        public void CheckingAndCounting(string[,] arr)
         {
 
             array = arr;
@@ -136,14 +137,14 @@ namespace Tic_Toe
                         Change("PlayerX");
                         Tru = true;
 
-                        Clearing();
+                        ClearingArray();
 
                     }
                     if ((k == 0) && (array[i, k] == "Y") && (array[i, k + 1] == "Y") && (array[i, k + 2] == "Y"))
                     {
                         PlayerY += 1;
                         Change("PlayerY");
-                        Clearing();
+                        ClearingArray();
                         Tru = true;
 
 
@@ -154,7 +155,7 @@ namespace Tic_Toe
                     {
                         PlayerX += 1;
                         Change("PlayerX");
-                        Clearing();
+                        ClearingArray();
                         Tru = true;
 
                     }
@@ -162,7 +163,7 @@ namespace Tic_Toe
                     {
                         PlayerY += 1;
                         Change("PlayerY");
-                        Clearing();
+                        ClearingArray();
                         Tru = true;
 
 
@@ -173,7 +174,7 @@ namespace Tic_Toe
                     {
                         PlayerX += 1;
                         Change("PlayerX");
-                        Clearing();
+                        ClearingArray();
                         Tru = true;
 
 
@@ -182,7 +183,7 @@ namespace Tic_Toe
                     {
                         PlayerY += 1;
                         Change("PlayerY");
-                        Clearing();
+                        ClearingArray();
                         Tru = true;
 
 
@@ -196,7 +197,7 @@ namespace Tic_Toe
                         {
                             PlayerX += 1;
                             Change("PlayerX");
-                            Clearing();
+                            ClearingArray();
                             Tru = true;
 
                         }
@@ -209,7 +210,7 @@ namespace Tic_Toe
                         {
                             PlayerY += 1;
                             Change("PlayerY");
-                            Clearing();
+                            ClearingArray();
                             Tru = true;
 
                         }
@@ -225,7 +226,7 @@ namespace Tic_Toe
 
             //pomocí pomocného textboxu budu poznávat zda tam má být křížek nebo kolečko a pomocí datatrigeru budu na něj se odtaz, jestli tam je křížek nebo kolečko a podle toho poznám, jaký znak by tam měl být
         }
-        public void Clearing()
+        public void ClearingArray()
         {
             for (int i = 0; i < array.GetLength(0); i++)
             {
@@ -237,14 +238,14 @@ namespace Tic_Toe
             }
             Change("array");
         }
-        public void Full(string[,] arr)
+        public void CountingFullness(string[,] arr)
         {
             array = arr;
             if (((array[0, 0] == "X") || (array[0, 0] == "Y")) && ((array[0, 1] == "X") || (array[0, 1] == "Y")) && ((array[1, 0] == "X") || (array[1, 0] == "Y")) && ((array[1, 1] == "X") || (array[1, 1] == "Y")) && ((array[0, 2] == "X") || (array[0, 2] == "Y")) && ((array[1, 2] == "X") || (array[1, 2] == "Y")) && ((array[2, 2] == "X") || (array[2, 2] == "Y")))
             {
                 Tie += 1;
                 Tru = true;
-                Clearing();
+                ClearingArray();
 
 
 
