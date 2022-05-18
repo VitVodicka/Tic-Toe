@@ -8,7 +8,7 @@ using System.Windows.Threading;
 
 namespace Tic_Toe
 {
-    class Background:INotifyPropertyChanged
+    class Background: INotifyPropertyChanged
     {
         public Background(int playerX, int playerY, int tie, string timer)
         {
@@ -16,6 +16,7 @@ namespace Tic_Toe
             PlayerY = playerY;
             Tie = tie;
             Timer = timer;
+            
         }
         public Background()
         {

@@ -24,6 +24,7 @@ namespace Tic_Toe
 
         Background b = new Background();
         string[,] arry = new string[3, 3];
+        File f = new File();
         
 
 
@@ -252,6 +253,10 @@ namespace Tic_Toe
             OpenPage p = new OpenPage();
             p.Show();
         }
-        
+
+        private void SaveFile(object sender, RoutedEventArgs e)
+        {
+            f.Saving();
+        }
     }
 }

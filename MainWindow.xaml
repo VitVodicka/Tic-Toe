@@ -349,7 +349,7 @@
                 <ImageBrush ImageSource="res.jpg" Stretch="Uniform"></ImageBrush>
             </Button.Background>
         </Button>
-        <Button Click="Restart" HorizontalAlignment="Center" Width="60" >
+        <Button Click="SaveFile" HorizontalAlignment="Center" Width="60" >
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Border x:Name="border" Background="{TemplateBinding Background}"></Border>
