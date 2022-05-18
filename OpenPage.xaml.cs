@@ -17,11 +17,11 @@ namespace Tic_Toe
     /// </summary>
     public partial class OpenPage : Window
     {
-        Background b = new Background();
+        File f = new File();
         public OpenPage()
         {
             InitializeComponent();
-            DataContext = b;
+            DataContext = f;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

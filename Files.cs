@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using System.Xml;
 
@@ -7,10 +8,42 @@ namespace Tic_Toe
 {
     internal class File: Background
     {
+        public ObservableCollection<Background> local { get; set; }
+        public File()
+        {
+            local = new ObservableCollection<Background>();
+        }
         
         public void Loading()
         {
-            
+            int playerx;
+            int playery;
+            int tie;
+            string timer;
+            string element;
+            try
+            {
+                using (XmlReader x = XmlReader.Create("records.xml"))
+                {
+                    while (x.Read())
+                    {
+                        if(x.NodeType == XmlNodeType.Element)
+                        {
+                            element = x.Name;
+                            
+                        }
+                        else if(x.NodeType == XmlNodeType.EndElement)
+                        {
+                            local.Add(playerx, playery, tie, timer);
+                        }
+                    }
+                    
+                }
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
         public void Saving()
         {

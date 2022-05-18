@@ -251,6 +251,7 @@ namespace Tic_Toe
         private void OpenPage(object sender, RoutedEventArgs e)
         {
             OpenPage p = new OpenPage();
+            f.Loading();
             p.Show();
         }
 
