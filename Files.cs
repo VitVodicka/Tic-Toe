@@ -34,7 +34,8 @@ namespace Tic_Toe
                         }
                         else if(x.NodeType == XmlNodeType.EndElement)
                         {
-                            local.Add(playerx, playery, tie, timer);
+                            Background b = new Background(playerx, playery, tie, timer);
+                            local.Add(b);
                         }
                     }
                     
