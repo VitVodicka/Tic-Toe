@@ -58,9 +58,9 @@ namespace Tic_Toe
         {
             if (turn.Text == "X turn")
             {
-                turn.Text = "Y turn";
+                turn.Text = "O turn";
             }
-            else if (turn.Text == "Y turn")
+            else if (turn.Text == "O turn")
             {
                 turn.Text = "X turn";
             }
@@ -221,8 +221,8 @@ namespace Tic_Toe
         private void Record_Click(object sender, RoutedEventArgs e)
         {
             
-
-            Background c = new Background(b.PlayerX, b.PlayerY, b.Tie, b.Timer);
+            
+            Background c = new Background(b.PlayerX, b.PlayerO, b.Tie, b.Timer);
 
 
             b.AddingToCollection(c);

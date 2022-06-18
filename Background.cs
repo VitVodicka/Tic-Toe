@@ -10,10 +10,10 @@ namespace Tic_Toe
 {
     class Background: INotifyPropertyChanged
     {
-        public Background(int playerX, int playerY, int tie, string timer)
+        public Background(int playerX, int playerO, int tie, string timer)
         {
             PlayerX = playerX;
-            PlayerY = playerY;
+            PlayerO = playerO;
             Tie = tie;
             Timer = timer;
             
@@ -30,7 +30,7 @@ namespace Tic_Toe
         string[,] arry = new string[3, 3];
 
         public int PlayerX { get; set; }
-        public int PlayerY { get; set; }
+        public int PlayerO { get; set; }
         public int Tie { get; set; }
 
         string timer;
@@ -121,7 +121,7 @@ namespace Tic_Toe
 
         public void Adding()
         {
-            Background b = new Background(PlayerX, PlayerY, Tie, Timer);
+            Background b = new Background(PlayerX, PlayerO, Tie, Timer);
             Observ.Add(b);
         }
         public void CheckingAndCounting(string[,] arr)
@@ -141,10 +141,10 @@ namespace Tic_Toe
                         ClearingArray();
 
                     }
-                    if ((k == 0) && (array[i, k] == "Y") && (array[i, k + 1] == "Y") && (array[i, k + 2] == "Y"))
+                    if ((k == 0) && (array[i, k] == "O") && (array[i, k + 1] == "O") && (array[i, k + 2] == "O"))
                     {
-                        PlayerY += 1;
-                        Change("PlayerY");
+                        PlayerO += 1;
+                        Change("PlayerO");
                         ClearingArray();
                         Tru = true;
 
@@ -160,10 +160,10 @@ namespace Tic_Toe
                         Tru = true;
 
                     }
-                    if ((i == 0) && (array[i, k] == "Y") && (array[i + 1, k] == "Y") && (array[i + 2, k] == "Y"))
+                    if ((i == 0) && (array[i, k] == "O") && (array[i + 1, k] == "O") && (array[i + 2, k] == "O"))
                     {
-                        PlayerY += 1;
-                        Change("PlayerY");
+                        PlayerO += 1;
+                        Change("PlayerO");
                         ClearingArray();
                         Tru = true;
 
@@ -180,10 +180,10 @@ namespace Tic_Toe
 
 
                     }
-                    if ((i == 0) && (k == 0) && (array[i, k] == "Y") && (array[i + 1, k + 1] == "Y") && (array[i + 2, k + 2] == "Y"))
+                    if ((i == 0) && (k == 0) && (array[i, k] == "O") && (array[i + 1, k + 1] == "O") && (array[i + 2, k + 2] == "O"))
                     {
-                        PlayerY += 1;
-                        Change("PlayerY");
+                        PlayerO += 1;
+                        Change("PlayerO");
                         ClearingArray();
                         Tru = true;
 
@@ -207,10 +207,10 @@ namespace Tic_Toe
                     }
                     if ((i == 0) && (k == 2))
                     {
-                        if ((array[i, k] == "Y") && (array[i + 1, k - 1] == "Y") && (array[i + 2, k - 2] == "Y"))
+                        if ((array[i, k] == "O") && (array[i + 1, k - 1] == "O") && (array[i + 2, k - 2] == "O"))
                         {
-                            PlayerY += 1;
-                            Change("PlayerY");
+                            PlayerO += 1;
+                            Change("PlayerO");
                             ClearingArray();
                             Tru = true;
 
@@ -242,7 +242,7 @@ namespace Tic_Toe
         public void CountingFullness(string[,] arr)
         {
             array = arr;
-            if (((array[0, 0] == "X") || (array[0, 0] == "Y")) && ((array[0, 1] == "X") || (array[0, 1] == "Y")) && ((array[1, 0] == "X") || (array[1, 0] == "Y")) && ((array[1, 1] == "X") || (array[1, 1] == "Y")) && ((array[0, 2] == "X") || (array[0, 2] == "Y")) && ((array[1, 2] == "X") || (array[1, 2] == "Y")) && ((array[2, 2] == "X") || (array[2, 2] == "Y")))
+            if (((array[0, 0] == "X") || (array[0, 0] == "O")) && ((array[0, 1] == "X") || (array[0, 1] == "O")) && ((array[1, 0] == "X") || (array[1, 0] == "O")) && ((array[1, 1] == "X") || (array[1, 1] == "O")) && ((array[0, 2] == "X") || (array[0, 2] == "O")) && ((array[1, 2] == "X") || (array[1, 2] == "O")) && ((array[2, 2] == "X") || (array[2, 2] == "O")))
             {
                 Tie += 1;
                 Tru = true;
@@ -263,14 +263,14 @@ namespace Tic_Toe
         }
         public override string ToString()
         {
-            return "Player X:" + PlayerX + " Player Y:" + PlayerY + " Tie:" + Tie + " Time:" + Timer;
+            return "Player X:" + PlayerX + " Player O:" + PlayerO + " Tie:" + Tie + " Time:" + Timer;
         }
         public void Restart()
         {
             PlayerX = 0;
             Change("PlayerX");
-            PlayerY = 0;
-            Change("PlayerY");
+            PlayerO = 0;
+            Change("PlayerO");
             Tie = 0;
             Change("Tie");
             t.Stop();

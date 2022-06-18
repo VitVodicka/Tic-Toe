@@ -16,7 +16,7 @@ namespace Tic_Toe
         
         public void Loading()
         {
-            int playerx;
+            /*int playerx;
             int playery;
             int tie;
             string timer;
@@ -44,7 +44,7 @@ namespace Tic_Toe
             catch(Exception e)
             {
                 Console.WriteLine(e.Message);
-            }
+            }*/
         }
         public void Saving()
         {
@@ -64,7 +64,7 @@ namespace Tic_Toe
                     {
                         x.WriteStartElement("Record");
                         x.WriteAttributeString("Player X:",b.PlayerX.ToString());
-                        x.WriteAttributeString("Player O:", b.PlayerY.ToString());
+                        x.WriteAttributeString("Player O:", b.PlayerO.ToString());
                         x.WriteAttributeString("Tie:", b.Tie.ToString());
                         x.WriteAttributeString("Time:", b.Timer.ToString());
                         x.WriteEndElement();

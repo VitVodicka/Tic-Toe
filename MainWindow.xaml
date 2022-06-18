@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tic_Toe"
         mc:Ignorable="d"
-        Title="Tic Toe" Height="840" Width="1280" WindowStartupLocation="CenterOwner" WindowState="Maximized" FontFamily="Play">
+        Title="Tic Toe" Height="840" MinHeight="800" MinWidth="1080" Width="1280" WindowStartupLocation="CenterOwner" WindowState="Maximized" FontFamily="Play">
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="0.4*"/>
@@ -20,307 +20,317 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="1.1*"/>
         </Grid.ColumnDefinitions>
-
-        <CheckBox  HorizontalAlignment="Right" Grid.Row="1" Grid.Column="0" Content="X" VerticalAlignment="Bottom"  Background="#E5E5E5"   BorderThickness="0.5" Name="arrayColumn0Row0" Checked="checking"  >
-            <CheckBox.BorderBrush  >
-                <SolidColorBrush Color="Black" ></SolidColorBrush>
-            </CheckBox.BorderBrush>
-            <CheckBox.LayoutTransform >
-                <ScaleTransform ScaleX="16" ScaleY="11"></ScaleTransform>
-            </CheckBox.LayoutTransform>
-            <CheckBox.Template>
-
-                <ControlTemplate TargetType="{x:Type CheckBox}" >
-
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" >
-                        <Border BorderBrush="{TemplateBinding BorderBrush}"  Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" Width="15" Height="15" IsEnabled="{TemplateBinding IsEnabled}">
-                            <!--                                   your color here -->
-
-                            <TextBlock Text="{TemplateBinding Content}" Width="15" Visibility="Visible" IsEnabled="False"  Foreground="Black" FontFamily="Play" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,-4,0"   Height="15" Name="cross"></TextBlock>
-                        </Border>
-
-                    </StackPanel>
-                    <ControlTemplate.Triggers >
-
-
-                        <Trigger Property="IsChecked" Value="True">
-                            <Setter TargetName="cross" Property="Visibility" Value="Visible"></Setter>
-                        </Trigger>
-
-                        <Trigger Property="IsChecked" Value="False">
-                            <Setter TargetName="cross" Property="Visibility" Value="Hidden"></Setter>
-                        </Trigger>
-
-
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </CheckBox.Template>
-        </CheckBox>
-        <CheckBox Grid.Row="2" HorizontalAlignment="Right" Content="X" VerticalAlignment="Center"  Background="#E5E5E5"  Height="Auto"  Width="Auto"  BorderThickness="0.5"   Name="arrayColumn0Row1" Checked="checking">
-            <CheckBox.BorderBrush  >
-                <SolidColorBrush Color="Black" ></SolidColorBrush>
-            </CheckBox.BorderBrush>
-            <CheckBox.LayoutTransform >
-                <ScaleTransform ScaleX="16" ScaleY="11"></ScaleTransform>
-            </CheckBox.LayoutTransform>
-            <CheckBox.Template>
-
-                <ControlTemplate TargetType="{x:Type CheckBox}" >
-
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" >
-                        <Border BorderBrush="{TemplateBinding BorderBrush}"  Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" Width="15" Height="15">
-                            <!--                                   your color here -->
-
-                            <TextBlock Text="{TemplateBinding Content}" Width="15" Visibility="Hidden" Foreground="Black" FontFamily="Play" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,-4,0"   Height="15" Name="cross"></TextBlock>
-                        </Border>
-
-                    </StackPanel>
-                    <ControlTemplate.Triggers >
-
-                        <Trigger Property="IsChecked" Value="True">
-                            <Setter TargetName="cross" Property="Visibility" Value="Visible"></Setter>
-                            
-                        </Trigger>
-                        <Trigger Property="IsChecked" Value="False">
-                            <Setter TargetName="cross" Property="Visibility" Value="Hidden"></Setter>
-                        </Trigger>
-
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </CheckBox.Template>
-        </CheckBox>
-        <CheckBox Grid.Row="3" Grid.Column="0"  Background="#E5E5E5"  HorizontalAlignment="Right" BorderThickness="0.5" VerticalAlignment="Top" Height="Auto"  Width="Auto"  Name="arrayColumn0Row2" Checked="checking" >
-            <CheckBox.BorderBrush  >
-                <SolidColorBrush Color="Black" ></SolidColorBrush>
-            </CheckBox.BorderBrush>
-            <CheckBox.LayoutTransform >
-                <ScaleTransform ScaleX="16" ScaleY="11"></ScaleTransform>
-            </CheckBox.LayoutTransform>
-            <CheckBox.Template>
-
-                <ControlTemplate TargetType="{x:Type CheckBox}" >
-
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" >
-                        <Border BorderBrush="{TemplateBinding BorderBrush}"  Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" Width="15" Height="15">
-                            <!--                                   your color here -->
-
-                            <TextBlock Text="{TemplateBinding Content}" Width="15" Visibility="Hidden" Foreground="Black" FontFamily="Play" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,-4,0"   Height="15" Name="cross"></TextBlock>
-                        </Border>
-
-                    </StackPanel>
-                    <ControlTemplate.Triggers >
-
-                        <Trigger Property="IsChecked" Value="True">
-                            <Setter TargetName="cross" Property="Visibility" Value="Visible"></Setter>
-
-                        </Trigger>
-                        <Trigger Property="IsChecked" Value="False">
-                            <Setter TargetName="cross" Property="Visibility" Value="Hidden"></Setter>
-                        </Trigger>
-
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </CheckBox.Template>
-        </CheckBox>
-        <CheckBox  Grid.Row="1"  Background="#E5E5E5" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Center"  Height="Auto" Width="Auto"    BorderThickness="0.5" Name="arrayColumn1Row0" Checked="checking" >
-            <CheckBox.BorderBrush  >
-                <SolidColorBrush Color="Black" ></SolidColorBrush>
-            </CheckBox.BorderBrush>
-            <CheckBox.LayoutTransform >
-                <ScaleTransform ScaleX="16" ScaleY="11"></ScaleTransform>
-            </CheckBox.LayoutTransform>
-            <CheckBox.Template>
-
-                <ControlTemplate TargetType="{x:Type CheckBox}" >
-
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" >
-                        <Border BorderBrush="{TemplateBinding BorderBrush}"  Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" Width="15" Height="15">
-                            <!--                                   your color here -->
-
-                            <TextBlock Text="{TemplateBinding Content}" Width="15" Visibility="Hidden" Foreground="Black" FontFamily="Play" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,-4,0"   Height="15" Name="cross"></TextBlock>
-                        </Border>
-
-                    </StackPanel>
-                    <ControlTemplate.Triggers >
-                        <Trigger Property="IsChecked" Value="True">
-                            <Setter TargetName="cross" Property="Visibility" Value="Visible"></Setter>
-
-                        </Trigger>
-                        <Trigger Property="IsChecked" Value="False">
-                            <Setter TargetName="cross" Property="Visibility" Value="Hidden"></Setter>
-                        </Trigger>
-
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </CheckBox.Template>
-        </CheckBox>
-        <CheckBox Grid.Row="2" Grid.Column="1"  Background="#E5E5E5" HorizontalAlignment="Center" MinHeight="14" Height="Auto"  Width="Auto"     BorderThickness="0.5" VerticalAlignment="Center"  Name="arrayColumn1Row1" Checked="checking"  >
-            <CheckBox.BorderBrush  >
-                <SolidColorBrush Color="Black" ></SolidColorBrush>
-            </CheckBox.BorderBrush>
-            <CheckBox.LayoutTransform >
-                <ScaleTransform ScaleX="16" ScaleY="11"></ScaleTransform>
-            </CheckBox.LayoutTransform>
-            <CheckBox.Template>
-
-                <ControlTemplate TargetType="{x:Type CheckBox}" >
-
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" >
-                        <Border BorderBrush="{TemplateBinding BorderBrush}"  Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" Width="15" Height="15">
-                            <!--                                   your color here -->
-
-                            <TextBlock Text="{TemplateBinding Content}" Width="15" Visibility="Hidden" Foreground="Black" FontFamily="Play" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,-4,0"   Height="15" Name="cross"></TextBlock>
-                        </Border>
-
-                    </StackPanel>
-                    <ControlTemplate.Triggers >
-
-                        <Trigger Property="IsChecked" Value="True">
-                            <Setter TargetName="cross" Property="Visibility" Value="Visible"></Setter>
-
-                        </Trigger>
-                        <Trigger Property="IsChecked" Value="False">
-                            <Setter TargetName="cross" Property="Visibility" Value="Hidden"></Setter>
-                        </Trigger>
-
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </CheckBox.Template>
-        </CheckBox>
-        <CheckBox Grid.Row="3"  Background="#E5E5E5" Grid.Column="1"  VerticalAlignment="Top" HorizontalAlignment="Center"  BorderThickness="0.5"  Height="Auto" Width="Auto"  Name="arrayColumn1Row2" Checked="checking"  >
-            <CheckBox.BorderBrush  >
-                <SolidColorBrush Color="Black" ></SolidColorBrush>
-            </CheckBox.BorderBrush>
-            <CheckBox.LayoutTransform >
-                <ScaleTransform ScaleX="16" ScaleY="11"></ScaleTransform>
-            </CheckBox.LayoutTransform>
-            <CheckBox.Template>
-
-                <ControlTemplate TargetType="{x:Type CheckBox}" >
-
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" >
-                        <Border BorderBrush="{TemplateBinding BorderBrush}"  Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" Width="15" Height="15">
-                            <!--                                   your color here -->
-
-                            <TextBlock Text="{TemplateBinding Content}" Width="15" Visibility="Hidden" Foreground="Black" FontFamily="Play" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,-4,0"   Height="15" Name="cross"></TextBlock>
-                        </Border>
-
-                    </StackPanel>
-                    <ControlTemplate.Triggers >
-
-                        <Trigger Property="IsChecked" Value="True">
-                            <Setter TargetName="cross" Property="Visibility" Value="Visible"></Setter>
-
-                        </Trigger>
-                        <Trigger Property="IsChecked" Value="False">
-                            <Setter TargetName="cross" Property="Visibility" Value="Hidden"></Setter>
-                        </Trigger>
-
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </CheckBox.Template>
-        </CheckBox>
-
-
-        <CheckBox  Grid.Row="1"   HorizontalAlignment="Left" VerticalAlignment="Bottom"  Width="Auto"  Height="Auto"   Background="#E5E5E5" Grid.Column="2"  BorderThickness="0.5" Name="arrayColumn2Row0" Checked="checking" >
-            <CheckBox.BorderBrush  >
-                <SolidColorBrush Color="Black" ></SolidColorBrush>
-            </CheckBox.BorderBrush>
-            <CheckBox.LayoutTransform >
-                <ScaleTransform ScaleX="16" ScaleY="11"></ScaleTransform>
-            </CheckBox.LayoutTransform>
-            <CheckBox.Template>
-
-                <ControlTemplate TargetType="{x:Type CheckBox}" >
-
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" >
-                        <Border BorderBrush="{TemplateBinding BorderBrush}"  Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" Width="15" Height="15">
-                            <!--                                   your color here -->
-
-                            <TextBlock Text="{TemplateBinding Content}" Width="15" Visibility="Hidden" Foreground="Black" FontFamily="Play" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,-4,0"   Height="15" Name="cross"></TextBlock>
-                        </Border>
-
-                    </StackPanel>
-                    <ControlTemplate.Triggers >
-
-                        <Trigger Property="IsChecked" Value="True">
-                            <Setter TargetName="cross" Property="Visibility" Value="Visible"></Setter>
-
-                        </Trigger>
-                        <Trigger Property="IsChecked" Value="False">
-                            <Setter TargetName="cross" Property="Visibility" Value="Hidden"></Setter>
-                        </Trigger>
-
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </CheckBox.Template>
-        </CheckBox>
-        <CheckBox Grid.Row="2" VerticalAlignment="Center" Background="#E5E5E5" Grid.Column="2"  Width="Auto"   HorizontalAlignment="Left" BorderThickness="0.5"  Height="Auto" Name="arrayColumn2Row1" Checked="checking" Grid.ColumnSpan="3">
-            <CheckBox.BorderBrush  >
-                <SolidColorBrush Color="Black" ></SolidColorBrush>
-            </CheckBox.BorderBrush>
-            <CheckBox.LayoutTransform >
-                <ScaleTransform ScaleX="16" ScaleY="11"></ScaleTransform>
-            </CheckBox.LayoutTransform>
-            <CheckBox.Template>
-
-                <ControlTemplate TargetType="{x:Type CheckBox}" >
-
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" >
-                        <Border BorderBrush="{TemplateBinding BorderBrush}"  Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" Width="15" Height="15">
-                            <!--                                   your color here -->
-
-                            <TextBlock Text="{TemplateBinding Content}" Width="15" Visibility="Hidden" Foreground="Black" FontFamily="Play" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,-4,0"   Height="15" Name="cross"></TextBlock>
-                        </Border>
-
-                    </StackPanel>
-                    <ControlTemplate.Triggers >
-
-                        <Trigger Property="IsChecked" Value="True">
-                            <Setter TargetName="cross" Property="Visibility" Value="Visible"></Setter>
-
-                        </Trigger>
-                        <Trigger Property="IsChecked" Value="False">
-                            <Setter TargetName="cross" Property="Visibility" Value="Hidden"></Setter>
-                        </Trigger>
-
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </CheckBox.Template>
-        </CheckBox>
-        <CheckBox  Grid.Row="3" Grid.Column="2"  Background="#E5E5E5" HorizontalAlignment="Left" VerticalAlignment="Top"  Width="Auto"    BorderThickness="0.5"  Height="Auto"  Name="arrayColumn2Row2" Checked="checking"  >
-            <CheckBox.BorderBrush  >
-                <SolidColorBrush Color="Black" ></SolidColorBrush>
-            </CheckBox.BorderBrush>
-            <CheckBox.LayoutTransform >
-                <ScaleTransform ScaleX="16" ScaleY="11"></ScaleTransform>
-            </CheckBox.LayoutTransform>
-            <CheckBox.Template>
-
-                <ControlTemplate TargetType="{x:Type CheckBox}" >
-
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" >
-                        <Border BorderBrush="{TemplateBinding BorderBrush}"  Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" Width="15" Height="15">
-                            <!--                                   your color here -->
-
-                            <TextBlock Text="{TemplateBinding Content}" Width="15" Visibility="Hidden" Foreground="Black" FontFamily="Play" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,-4,0"   Height="15" Name="cross"></TextBlock>
-                        </Border>
-
-                    </StackPanel>
-                    <ControlTemplate.Triggers >
-
-                        <Trigger Property="IsChecked" Value="True">
-                            <Setter TargetName="cross" Property="Visibility" Value="Visible"></Setter>
-
-                        </Trigger>
-                        <Trigger Property="IsChecked" Value="False">
-                            <Setter TargetName="cross" Property="Visibility" Value="Hidden"></Setter>
-                        </Trigger>
-
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </CheckBox.Template>
-        </CheckBox>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.RowSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.ColumnSpan="3">
+            <StackPanel Orientation="Vertical">
+                <CheckBox   Content="X"   Background="#E5E5E5"   BorderThickness="0.5" Name="arrayColumn0Row0" Checked="checking"  >
+                    <CheckBox.BorderBrush  >
+                        <SolidColorBrush Color="Black" ></SolidColorBrush>
+                    </CheckBox.BorderBrush>
+                    <CheckBox.LayoutTransform >
+                        <ScaleTransform ScaleX="17" ScaleY="12"></ScaleTransform>
+                    </CheckBox.LayoutTransform>
+                    <CheckBox.Template>
+
+                        <ControlTemplate TargetType="{x:Type CheckBox}" >
+
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" >
+                                <Border BorderBrush="{TemplateBinding BorderBrush}"  Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" Width="15" Height="15" IsEnabled="{TemplateBinding IsEnabled}">
+                                    <!--                                   your color here -->
+
+                                    <TextBlock Text="{TemplateBinding Content}" Width="15" Visibility="Visible" IsEnabled="False"  Foreground="Black" FontFamily="Play" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,-4,0"   Height="15" Name="cross"></TextBlock>
+                                </Border>
+
+                            </StackPanel>
+                            <ControlTemplate.Triggers >
+
+
+                                <Trigger Property="IsChecked" Value="True">
+                                    <Setter TargetName="cross" Property="Visibility" Value="Visible"></Setter>
+                                </Trigger>
+
+                                <Trigger Property="IsChecked" Value="False">
+                                    <Setter TargetName="cross" Property="Visibility" Value="Hidden"></Setter>
+                                </Trigger>
+
+
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </CheckBox.Template>
+                </CheckBox>
+                <CheckBox  Content="X" VerticalAlignment="Center"  Background="#E5E5E5"  Height="Auto"  Width="Auto"  BorderThickness="0.5"   Name="arrayColumn0Row1" Checked="checking">
+                    <CheckBox.BorderBrush  >
+                        <SolidColorBrush Color="Black" ></SolidColorBrush>
+                    </CheckBox.BorderBrush>
+                    <CheckBox.LayoutTransform >
+                        <ScaleTransform ScaleX="17" ScaleY="12"></ScaleTransform>
+                    </CheckBox.LayoutTransform>
+                    <CheckBox.Template>
+
+                        <ControlTemplate TargetType="{x:Type CheckBox}" >
+
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" >
+                                <Border BorderBrush="{TemplateBinding BorderBrush}"  Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" Width="15" Height="15">
+                                    <!--                                   your color here -->
+
+                                    <TextBlock Text="{TemplateBinding Content}" Width="15" Visibility="Hidden" Foreground="Black" FontFamily="Play" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,-4,0"   Height="15" Name="cross"></TextBlock>
+                                </Border>
+
+                            </StackPanel>
+                            <ControlTemplate.Triggers >
+
+                                <Trigger Property="IsChecked" Value="True">
+                                    <Setter TargetName="cross" Property="Visibility" Value="Visible"></Setter>
+
+                                </Trigger>
+                                <Trigger Property="IsChecked" Value="False">
+                                    <Setter TargetName="cross" Property="Visibility" Value="Hidden"></Setter>
+                                </Trigger>
+
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </CheckBox.Template>
+                </CheckBox>
+                <CheckBox   Background="#E5E5E5"   BorderThickness="0.5"  Height="Auto"  Width="Auto"  Name="arrayColumn0Row2" Checked="checking" >
+                    <CheckBox.BorderBrush  >
+                        <SolidColorBrush Color="Black" ></SolidColorBrush>
+                    </CheckBox.BorderBrush>
+                    <CheckBox.LayoutTransform >
+                        <ScaleTransform ScaleX="17" ScaleY="12"></ScaleTransform>
+                    </CheckBox.LayoutTransform>
+                    <CheckBox.Template>
+
+                        <ControlTemplate TargetType="{x:Type CheckBox}" >
+
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" >
+                                <Border BorderBrush="{TemplateBinding BorderBrush}"  Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" Width="15" Height="15">
+                                    <!--                                   your color here -->
+
+                                    <TextBlock Text="{TemplateBinding Content}" Width="15" Visibility="Hidden" Foreground="Black" FontFamily="Play" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,-4,0"   Height="15" Name="cross"></TextBlock>
+                                </Border>
+
+                            </StackPanel>
+                            <ControlTemplate.Triggers >
+
+                                <Trigger Property="IsChecked" Value="True">
+                                    <Setter TargetName="cross" Property="Visibility" Value="Visible"></Setter>
+
+                                </Trigger>
+                                <Trigger Property="IsChecked" Value="False">
+                                    <Setter TargetName="cross" Property="Visibility" Value="Hidden"></Setter>
+                                </Trigger>
+
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </CheckBox.Template>
+                </CheckBox>
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <CheckBox    Background="#E5E5E5"  Height="Auto" Width="Auto"    BorderThickness="0.5" Name="arrayColumn1Row0" Checked="checking" >
+                    <CheckBox.BorderBrush  >
+                        <SolidColorBrush Color="Black" ></SolidColorBrush>
+                    </CheckBox.BorderBrush>
+                    <CheckBox.LayoutTransform >
+                        <ScaleTransform ScaleX="17" ScaleY="12"></ScaleTransform>
+                    </CheckBox.LayoutTransform>
+                    <CheckBox.Template>
+
+                        <ControlTemplate TargetType="{x:Type CheckBox}" >
+
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" >
+                                <Border BorderBrush="{TemplateBinding BorderBrush}"  Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" Width="15" Height="15">
+                                    <!--                                   your color here -->
+
+                                    <TextBlock Text="{TemplateBinding Content}" Width="15" Visibility="Hidden" Foreground="Black" FontFamily="Play" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,-4,0"   Height="15" Name="cross"></TextBlock>
+                                </Border>
+
+                            </StackPanel>
+                            <ControlTemplate.Triggers >
+                                <Trigger Property="IsChecked" Value="True">
+                                    <Setter TargetName="cross" Property="Visibility" Value="Visible"></Setter>
+
+                                </Trigger>
+                                <Trigger Property="IsChecked" Value="False">
+                                    <Setter TargetName="cross" Property="Visibility" Value="Hidden"></Setter>
+                                </Trigger>
+
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </CheckBox.Template>
+                </CheckBox>
+                <CheckBox   Background="#E5E5E5"  Height="Auto"  Width="Auto"     BorderThickness="0.5"   Name="arrayColumn1Row1" Checked="checking"  >
+                    <CheckBox.BorderBrush  >
+                        <SolidColorBrush Color="Black" ></SolidColorBrush>
+                    </CheckBox.BorderBrush>
+                    <CheckBox.LayoutTransform >
+                        <ScaleTransform ScaleX="17" ScaleY="12"></ScaleTransform>
+                    </CheckBox.LayoutTransform>
+                    <CheckBox.Template>
+
+                        <ControlTemplate TargetType="{x:Type CheckBox}" >
+
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" >
+                                <Border BorderBrush="{TemplateBinding BorderBrush}"  Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" Width="15" Height="15">
+                                    <!--                                   your color here -->
+
+                                    <TextBlock Text="{TemplateBinding Content}" Width="15" Visibility="Hidden" Foreground="Black" FontFamily="Play" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,-4,0"   Height="15" Name="cross"></TextBlock>
+                                </Border>
+
+                            </StackPanel>
+                            <ControlTemplate.Triggers >
+
+                                <Trigger Property="IsChecked" Value="True">
+                                    <Setter TargetName="cross" Property="Visibility" Value="Visible"></Setter>
+
+                                </Trigger>
+                                <Trigger Property="IsChecked" Value="False">
+                                    <Setter TargetName="cross" Property="Visibility" Value="Hidden"></Setter>
+                                </Trigger>
+
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </CheckBox.Template>
+                </CheckBox>
+                <CheckBox   Background="#E5E5E5"   BorderThickness="0.5"  Height="Auto" Width="Auto"  Name="arrayColumn1Row2" Checked="checking"  >
+                    <CheckBox.BorderBrush  >
+                        <SolidColorBrush Color="Black" ></SolidColorBrush>
+                    </CheckBox.BorderBrush>
+                    <CheckBox.LayoutTransform >
+                        <ScaleTransform ScaleX="17" ScaleY="12"></ScaleTransform>
+                    </CheckBox.LayoutTransform>
+                    <CheckBox.Template>
+
+                        <ControlTemplate TargetType="{x:Type CheckBox}" >
+
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" >
+                                <Border BorderBrush="{TemplateBinding BorderBrush}"  Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" Width="15" Height="15">
+                                    <!--                                   your color here -->
+
+                                    <TextBlock Text="{TemplateBinding Content}" Width="15" Visibility="Hidden" Foreground="Black" FontFamily="Play" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,-4,0"   Height="15" Name="cross"></TextBlock>
+                                </Border>
+
+                            </StackPanel>
+                            <ControlTemplate.Triggers >
+
+                                <Trigger Property="IsChecked" Value="True">
+                                    <Setter TargetName="cross" Property="Visibility" Value="Visible"></Setter>
+
+                                </Trigger>
+                                <Trigger Property="IsChecked" Value="False">
+                                    <Setter TargetName="cross" Property="Visibility" Value="Hidden"></Setter>
+                                </Trigger>
+
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </CheckBox.Template>
+                </CheckBox>
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <CheckBox    Width="Auto"  Height="Auto"   Background="#E5E5E5" Grid.Column="2"  BorderThickness="0.5" Name="arrayColumn2Row0" Checked="checking" >
+                    <CheckBox.BorderBrush  >
+                        <SolidColorBrush Color="Black" ></SolidColorBrush>
+                    </CheckBox.BorderBrush>
+                    <CheckBox.LayoutTransform >
+                        <ScaleTransform ScaleX="17" ScaleY="12"></ScaleTransform>
+                    </CheckBox.LayoutTransform>
+                    <CheckBox.Template>
+
+                        <ControlTemplate TargetType="{x:Type CheckBox}" >
+
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" >
+                                <Border BorderBrush="{TemplateBinding BorderBrush}"  Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" Width="15" Height="15">
+                                    <!--                                   your color here -->
+
+                                    <TextBlock Text="{TemplateBinding Content}" Width="15" Visibility="Hidden" Foreground="Black" FontFamily="Play" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,-4,0"   Height="15" Name="cross"></TextBlock>
+                                </Border>
+
+                            </StackPanel>
+                            <ControlTemplate.Triggers >
+
+                                <Trigger Property="IsChecked" Value="True">
+                                    <Setter TargetName="cross" Property="Visibility" Value="Visible"></Setter>
+
+                                </Trigger>
+                                <Trigger Property="IsChecked" Value="False">
+                                    <Setter TargetName="cross" Property="Visibility" Value="Hidden"></Setter>
+                                </Trigger>
+
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </CheckBox.Template>
+                </CheckBox>
+                <CheckBox  Background="#E5E5E5"   Width="Auto"    BorderThickness="0.5"  Height="Auto" Name="arrayColumn2Row1" Checked="checking" Grid.ColumnSpan="3">
+                    <CheckBox.BorderBrush  >
+                        <SolidColorBrush Color="Black" ></SolidColorBrush>
+                    </CheckBox.BorderBrush>
+                    <CheckBox.LayoutTransform >
+                        <ScaleTransform ScaleX="17" ScaleY="12"></ScaleTransform>
+                    </CheckBox.LayoutTransform>
+                    <CheckBox.Template>
+
+                        <ControlTemplate TargetType="{x:Type CheckBox}" >
+
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" >
+                                <Border BorderBrush="{TemplateBinding BorderBrush}"  Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" Width="15" Height="15">
+                                    <!--                                   your color here -->
+
+                                    <TextBlock Text="{TemplateBinding Content}" Width="15" Visibility="Hidden" Foreground="Black" FontFamily="Play" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,-4,0"   Height="15" Name="cross"></TextBlock>
+                                </Border>
+
+                            </StackPanel>
+                            <ControlTemplate.Triggers >
+
+                                <Trigger Property="IsChecked" Value="True">
+                                    <Setter TargetName="cross" Property="Visibility" Value="Visible"></Setter>
+
+                                </Trigger>
+                                <Trigger Property="IsChecked" Value="False">
+                                    <Setter TargetName="cross" Property="Visibility" Value="Hidden"></Setter>
+                                </Trigger>
+
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </CheckBox.Template>
+                </CheckBox>
+                <CheckBox   Background="#E5E5E5"   Width="Auto"    BorderThickness="0.5"  Height="Auto"  Name="arrayColumn2Row2" Checked="checking"  >
+                    <CheckBox.BorderBrush  >
+                        <SolidColorBrush Color="Black" ></SolidColorBrush>
+                    </CheckBox.BorderBrush>
+                    <CheckBox.LayoutTransform >
+                        <ScaleTransform ScaleX="17" ScaleY="12"></ScaleTransform>
+                    </CheckBox.LayoutTransform>
+                    <CheckBox.Template>
+
+                        <ControlTemplate TargetType="{x:Type CheckBox}" >
+
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" >
+                                <Border BorderBrush="{TemplateBinding BorderBrush}"  Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" Width="15" Height="15">
+                                    <!--                                   your color here -->
+
+                                    <TextBlock Text="{TemplateBinding Content}" Width="15" Visibility="Hidden" Foreground="Black" FontFamily="Play" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,-4,0"   Height="15" Name="cross"></TextBlock>
+                                </Border>
+
+                            </StackPanel>
+                            <ControlTemplate.Triggers >
+
+                                <Trigger Property="IsChecked" Value="True">
+                                    <Setter TargetName="cross" Property="Visibility" Value="Visible"></Setter>
+
+                                </Trigger>
+                                <Trigger Property="IsChecked" Value="False">
+                                    <Setter TargetName="cross" Property="Visibility" Value="Hidden"></Setter>
+                                </Trigger>
+
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </CheckBox.Template>
+                </CheckBox>
+            </StackPanel>
+        </StackPanel>
+        
+       
+
+
+        
 
         <TextBlock FontFamily="Play" Text="X turn" FontSize="50" Grid.Column="1" HorizontalAlignment="Center" Width="146" Name="turn" />
         <StackPanel Orientation="Vertical" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Height="104" Width="128" >
@@ -329,7 +339,7 @@
         </StackPanel>
         <StackPanel Orientation="Vertical" Grid.Row="4" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Height="104" Width="132" >
             <Label Content="Player(O)" FontSize="30" FontFamily="Play" Margin="0,0,0,25" HorizontalContentAlignment="Center"></Label>
-            <TextBlock Text="{Binding PlayerY}" FontSize="30" FontFamily="Play" TextAlignment="Center"></TextBlock>
+            <TextBlock Text="{Binding PlayerO}" FontSize="30" FontFamily="Play" TextAlignment="Center"></TextBlock>
         </StackPanel>
         <StackPanel Orientation="Vertical" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="104" Width="50" >
             <Label Content="Tie" FontSize="30" FontFamily="Play" Margin="0,0,0,25" HorizontalContentAlignment="Center"></Label>
@@ -339,7 +349,7 @@
             <Label Content="Timer" FontSize="30" FontFamily="Play" Margin="0,0,0,25" HorizontalContentAlignment="Center"></Label>
             <TextBlock Text="{Binding Timer}" FontSize="30" FontFamily="Play" TextAlignment="Center" Name="stopwatch"></TextBlock>
         </StackPanel>
-        <Button Grid.Column="0" Click="Restart" HorizontalAlignment="Left" Width="60" >
+        <Button Grid.Column="0" Click="Restart" HorizontalAlignment="Left" Width="50" >
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Border x:Name="border" Background="{TemplateBinding Background}"></Border>
@@ -349,7 +359,7 @@
                 <ImageBrush ImageSource="res.jpg" Stretch="Uniform"></ImageBrush>
             </Button.Background>
         </Button>
-        <Button Click="SaveFile" HorizontalAlignment="Center" Width="60" >
+        <Button Click="SaveFile" HorizontalAlignment="Center" Width="50" >
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Border x:Name="border" Background="{TemplateBinding Background}"></Border>
@@ -359,7 +369,7 @@
                 <ImageBrush ImageSource="load.png" Stretch="Uniform"></ImageBrush>
             </Button.Background>
         </Button>
-        <Button Grid.Column="0" Click="OpenPage" HorizontalAlignment="Left" Width="60" Margin="247,0,0,0" >
+        <Button Grid.Column="0" Click="OpenPage" HorizontalAlignment="Right" Width="50" >
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Border x:Name="border" Background="{TemplateBinding Background}"></Border>
