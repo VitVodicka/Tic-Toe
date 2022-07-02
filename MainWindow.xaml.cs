@@ -257,7 +257,7 @@ namespace Tic_Toe
 
         private void SaveFile(object sender, RoutedEventArgs e)
         {
-            f.Saving();
+            f.Saving(record.SelectedIndex);
         }
     }
 }

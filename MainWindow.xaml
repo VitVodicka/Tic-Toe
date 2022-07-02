@@ -326,11 +326,11 @@
                 </CheckBox>
             </StackPanel>
         </StackPanel>
-        
-       
 
 
-        
+
+
+
 
         <TextBlock FontFamily="Play" Text="X turn" FontSize="50" Grid.Column="1" HorizontalAlignment="Center" Width="146" Name="turn" />
         <StackPanel Orientation="Vertical" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Height="104" Width="128" >
@@ -359,7 +359,7 @@
                 <ImageBrush ImageSource="res.jpg" Stretch="Uniform"></ImageBrush>
             </Button.Background>
         </Button>
-        <Button Click="SaveFile" HorizontalAlignment="Center" Width="50" >
+        <Button Click="SaveFile" HorizontalAlignment="Center" Width="50" Height="78" VerticalAlignment="Top" >
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Border x:Name="border" Background="{TemplateBinding Background}"></Border>
@@ -380,9 +380,9 @@
             </Button.Background>
         </Button>
 
-        <ListBox Grid.Column="3" ItemsSource="{Binding Observ}" FontSize="16" FontFamily="Play" Grid.Row="0" Grid.RowSpan="3" Height="500" VerticalAlignment="Top" Background="#E9E9E9" Margin="10,10,10,0" Name="record" MouseDoubleClick="doubleListClick"></ListBox>
+        <ListBox Grid.Column="3" ItemsSource="{Binding Observ}" FontSize="14" FontFamily="Play" Grid.Row="0" Grid.RowSpan="3" Height="500" VerticalAlignment="Top" Background="#E9E9E9" Margin="10,10,10,0" Name="record" MouseDoubleClick="doubleListClick"></ListBox>
         <Button Content="Record" Grid.Column="3" Grid.Row="3" Height="110" FontSize="36" VerticalAlignment="Top" Margin="33,21,32,0" Click="Record_Click"/>
-      
+
 
     </Grid>
 </Window>

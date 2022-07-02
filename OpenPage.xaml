@@ -5,18 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tic_Toe"
         mc:Ignorable="d"
-        Title="OpenPage" Height="740" Width="1280" FontFamily="Play" WindowStartupLocation="CenterScreen">
+        Title="OpenPage" Height="640" Width="680" FontFamily="Play" MinHeight="640" MaxHeight="640" MinWidth="680" MaxWidth="680" WindowStartupLocation="CenterScreen">
     <Grid Margin="10">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.65*"/>
+            
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-
-        <DataGrid Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}" Background="#E9E9E9" Margin="10,80,0,10"/>
-        <ListBox ItemsSource="{Binding local}" Grid.Column="0" Margin="15,70,15,140" Background="#E9E9E9"></ListBox>
+        <ListBox ItemsSource="{Binding FileObserv}" Grid.Column="0" Margin="15,70,15,10" Background="#E9E9E9"></ListBox>
         <TextBlock Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Text="My Records" FontSize="50"></TextBlock>
-        <Button Grid.Column="0" Width="250" Height="80" VerticalAlignment="Bottom" Margin="0,0,0,20" Content="Record" FontSize="25" Click="Button_Click"></Button>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Text="World Records" FontSize="50"></TextBlock>
 
 
 

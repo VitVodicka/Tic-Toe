@@ -42,7 +42,7 @@ namespace Tic_Toe
         public string[,] array { get; set; }
         public bool Tru { get; set; }
 
-        public ObservableCollection<Background> Observ { get; set; }
+        public static ObservableCollection<Background> Observ { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 

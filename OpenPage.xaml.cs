@@ -24,9 +24,6 @@ namespace Tic_Toe
             DataContext = f;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+        
     }
 }
