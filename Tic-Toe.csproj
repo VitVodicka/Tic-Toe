@@ -8,14 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="edit.png" />
+    <None Remove="cancel.png" />
     <None Remove="load.png" />
     <None Remove="res.jpg" />
     <None Remove="res.png" />
+    <None Remove="trash-can.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="edit.png">
+    <Content Include="cancel.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="load.png">
@@ -24,12 +25,9 @@
     <Content Include="res.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="pismenoR.png">
+    <Content Include="trash-can.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    </Content>
   </ItemGroup>
 
 </Project>

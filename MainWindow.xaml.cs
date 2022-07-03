@@ -23,8 +23,8 @@ namespace Tic_Toe
     {
 
         Background b = new Background();
-        string[,] arry = new string[3, 3];
         File f = new File();
+        string[,] arry = new string[3, 3];
         
 
 
@@ -33,7 +33,9 @@ namespace Tic_Toe
             InitializeComponent();
             DataContext = b;
             b.init();
-            
+            f.LoadingFile();
+           
+
 
 
         }
@@ -228,11 +230,7 @@ namespace Tic_Toe
             b.AddingToCollection(c);
         }
 
-        private void load_Click(object sender, RoutedEventArgs e)
-        {
-            OpenPage z = new OpenPage();
-            z.Show();
-        }
+        
 
         private void Restart(object sender, RoutedEventArgs e)
         {
@@ -248,16 +246,16 @@ namespace Tic_Toe
             b.DoubleClick(record.SelectedIndex);
         }
 
-        private void OpenPage(object sender, RoutedEventArgs e)
-        {
-            OpenPage p = new OpenPage();
-            f.Loading();
-            p.Show();
-        }
+        
 
         private void SaveFile(object sender, RoutedEventArgs e)
         {
-            f.Saving(record.SelectedIndex);
+            f.SavingToFile();
+        }
+
+        private void trashfile(object sender, RoutedEventArgs e)
+        {
+            f.TrashFile();
         }
     }
 }

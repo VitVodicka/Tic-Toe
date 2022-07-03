@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.IO;
 using System.Text;
+using System.Windows;
 using System.Windows.Threading;
 
 namespace Tic_Toe
@@ -294,5 +296,6 @@ namespace Tic_Toe
             
             Change("Observ");
         }
+     
     }
 }

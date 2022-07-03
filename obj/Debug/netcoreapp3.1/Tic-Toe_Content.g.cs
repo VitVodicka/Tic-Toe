@@ -8,8 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("edit.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("cancel.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("load.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("res.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("trash-can.png")]
 
 
