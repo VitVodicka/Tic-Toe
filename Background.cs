@@ -12,7 +12,7 @@ namespace Tic_Toe
 {
     class Background: INotifyPropertyChanged
     {
-        public Background(int playerX, int playerO, int tie, string timer)
+        public Background(int playerX, int playerO, int tie, string timer)//declaring new constructor
         {
             PlayerX = playerX;
             PlayerO = playerO;
@@ -20,16 +20,16 @@ namespace Tic_Toe
             Timer = timer;
             
         }
-        public Background()
+        public Background()//declaring new constructor
         {
             Observ = new ObservableCollection<Background>();
             Tru = false;
         }
-        DispatcherTimer t = new DispatcherTimer();
-        int s = 0;
-        int h = 0;
-        int m = 0;
-        string[,] arry = new string[3, 3];
+        DispatcherTimer t = new DispatcherTimer();//declaring timer and seconds, hours,minutes
+        int s = 0;//seconds
+        int h = 0;//hours
+        int m = 0;//minutes
+        string[,] arry = new string[3, 3];//declaring 3x3 array
 
         public int PlayerX { get; set; }
         public int PlayerO { get; set; }
@@ -41,14 +41,14 @@ namespace Tic_Toe
         
         }
 
-        public string[,] array { get; set; }
+        public string[,] array { get; set; }//declaring array to compare 
         public bool Tru { get; set; }
 
-        public static ObservableCollection<Background> Observ { get; set; }
+        public static ObservableCollection<Background> Observ { get; set; }//observablecollection
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public void init()
+        public void init()//default settings of timer
         {
             
             t.Interval = new TimeSpan(0, 0, 1);
@@ -56,7 +56,7 @@ namespace Tic_Toe
             t.Tick += new EventHandler(dispatcherTick);
             t.Start();
         }
-        private void dispatcherTick(object sender, EventArgs e)
+        private void dispatcherTick(object sender, EventArgs e)//ticking timer
         {
             s += 1;
             if (s >= 60)
@@ -77,7 +77,7 @@ namespace Tic_Toe
 
 
         }
-        private void TimerFormating()
+        private void TimerFormating()//timer formating
         {
             if ((s <= 9) && (h <= 9) && (m <= 9))
             {
@@ -120,13 +120,7 @@ namespace Tic_Toe
             Observ.Add(b);
             Change("Observ");
         }
-
-        public void Adding()
-        {
-            Background b = new Background(PlayerX, PlayerO, Tie, Timer);
-            Observ.Add(b);
-        }
-        public void CheckingAndCounting(string[,] arr)
+        public void CheckingAndCounting(string[,] arr)//algorithm checking Tic Toe
         {
 
             array = arr;
@@ -226,10 +220,8 @@ namespace Tic_Toe
                     //rows working
                 }
             }
-
-            //pomocí pomocného textboxu budu poznávat zda tam má být křížek nebo kolečko a pomocí datatrigeru budu na něj se odtaz, jestli tam je křížek nebo kolečko a podle toho poznám, jaký znak by tam měl být
         }
-        public void ClearingArray()
+        public void ClearingArray()//clearing array
         {
             for (int i = 0; i < array.GetLength(0); i++)
             {
@@ -241,7 +233,7 @@ namespace Tic_Toe
             }
             Change("array");
         }
-        public void CountingFullness(string[,] arr)
+        public void CountingFullness(string[,] arr)//if the array is full than it adds 1 to tie
         {
             array = arr;
             if (((array[0, 0] == "X") || (array[0, 0] == "O")) && ((array[0, 1] == "X") || (array[0, 1] == "O")) && ((array[1, 0] == "X") || (array[1, 0] == "O")) && ((array[1, 1] == "X") || (array[1, 1] == "O")) && ((array[0, 2] == "X") || (array[0, 2] == "O")) && ((array[1, 2] == "X") || (array[1, 2] == "O")) && ((array[2, 2] == "X") || (array[2, 2] == "O")))
@@ -263,7 +255,7 @@ namespace Tic_Toe
                 PropertyChanged(this, new PropertyChangedEventArgs(change));
             }
         }
-        public override string ToString()
+        public override string ToString()//string formating in listbox
         {
             return "Player X:" + PlayerX + " Player O:" + PlayerO + " Tie:" + Tie + " Time:" + Timer;
         }
@@ -287,7 +279,7 @@ namespace Tic_Toe
             Change("Timer");
 
         }
-        public void DoubleClick(int index)
+        public void DoubleClick(int index)//removing from observablecollection or array
         {
             if (index != -1)
             {

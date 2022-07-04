@@ -8,9 +8,9 @@ namespace Tic_Toe
 {
     class File
     {
-        Background b = new Background();
+        Background b = new Background();//declaring new class
         public void SavingToFile()
-        {
+        {//saving observablecollection to file, if there is any
             if (Background.Observ.Count > 0)
             {
                 try
@@ -38,7 +38,7 @@ namespace Tic_Toe
             }
         }
         public void TrashFile()
-        {
+        {//clearing file 
             try { 
             using (StreamWriter s = new StreamWriter("file.csv", false))
             {
@@ -52,7 +52,7 @@ namespace Tic_Toe
             }
         }
         public void LoadingFile()
-        {
+        {//loading file if there is some line and if the user wants to load
             using (StreamReader s = new StreamReader("file.csv"))
             {
                 string line;

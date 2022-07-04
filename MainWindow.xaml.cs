@@ -22,9 +22,9 @@ namespace Tic_Toe
     public partial class MainWindow : Window
     {
 
-        Background b = new Background();
-        File f = new File();
-        string[,] arry = new string[3, 3];
+        Background b = new Background();//declaring class background
+        File f = new File();//declaring class File
+        string[,] arry = new string[3, 3];//declaring 3x3 array
         
 
 
@@ -32,8 +32,8 @@ namespace Tic_Toe
         {
             InitializeComponent();
             DataContext = b;
-            b.init();
-            f.LoadingFile();
+            b.init();//setting up timer
+            f.LoadingFile();//loads file if there is something in file
            
 
 
@@ -43,12 +43,12 @@ namespace Tic_Toe
         private void checking(object sender, RoutedEventArgs e)
         {
             
-            RowChecking();
+            RowChecking();//checking if there is something in array
 
-            SwitchingXO();
-            b.CheckingAndCounting(arry);
-            b.CountingFullness(arry);
-            if (b.Tru == true)
+            SwitchingXO();//automatically swithing X to O
+            b.CheckingAndCounting(arry);//counting if X or O has point
+            b.CountingFullness(arry);//counting fullness
+            if (b.Tru == true)//if the array is full or somebody has got point than the array is resetting
             {
                 ArrayRestarting();
             }
@@ -243,7 +243,7 @@ namespace Tic_Toe
 
         private void doubleListClick(object sender, MouseButtonEventArgs e)
         {
-            b.DoubleClick(record.SelectedIndex);
+            b.DoubleClick(record.SelectedIndex);//deleting from observablecollection
         }
 
         
@@ -255,7 +255,7 @@ namespace Tic_Toe
 
         private void trashfile(object sender, RoutedEventArgs e)
         {
-            f.TrashFile();
+            f.TrashFile();//cleares file
         }
     }
 }
